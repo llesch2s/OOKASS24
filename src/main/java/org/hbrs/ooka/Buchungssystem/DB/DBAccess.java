@@ -1,4 +1,4 @@
-package org.hbrs.ooka.uebung1;
+package org.hbrs.ooka.Buchungssystem.DB;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
