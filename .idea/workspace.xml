@@ -4,11 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8eec5bcc-940c-4ed5-aa61-73870d3cf9a0" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/java/JUnit_Test.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+    <list default="true" id="8eec5bcc-940c-4ed5-aa61-73870d3cf9a0" name="Changes" comment="UnitTest">
+      <change beforePath="$PROJECT_DIR$/src/test/java/JUnit_Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/JUnit_Test.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,6 +54,8 @@
     "JUnit.JUnit_Test.testGetHotelByName.executor": "Run",
     "JUnit.JUnit_Test.testGetHotelByNameComplete.executor": "Run",
     "JUnit.JUnit_Test.testGetHotelByName_ID.executor": "Run",
+    "JUnit.JUnit_Test.testGetHotelByName_Location.executor": "Run",
+    "JUnit.JUnit_Test.testGetHotelByName_Name.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
@@ -79,7 +78,7 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.JUnit_Test">
+  <component name="RunManager" selected="JUnit.JUnit_Test.testGetHotelByName_Location">
     <configuration name="MainClass" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.hbrs.ooka.Buchungssystem.MainClass" />
       <module name="OOKAAbgabeLukasLeschUeb1" />
@@ -134,8 +133,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.JUnit_Test" />
         <item itemvalue="JUnit.JUnit_Test.testGetHotelByName_Location" />
+        <item itemvalue="JUnit.JUnit_Test" />
         <item itemvalue="JUnit.JUnit_Test.testGetHotelByName_Name" />
         <item itemvalue="JUnit.JUnit_Test.testGetHotelByName_ID" />
         <item itemvalue="Application.MainClass" />
@@ -160,11 +159,24 @@
       <updated>1712646061979</updated>
       <workItem from="1712646063028" duration="8337000" />
       <workItem from="1713003032295" duration="15312000" />
-      <workItem from="1713440330847" duration="12347000" />
+      <workItem from="1713440330847" duration="12718000" />
     </task>
+    <task id="LOCAL-00001" summary="UnitTest">
+      <option name="closed" value="true" />
+      <created>1713455232227</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1713455232227</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="UnitTest" />
+    <option name="LAST_COMMIT_MESSAGE" value="UnitTest" />
   </component>
 </project>

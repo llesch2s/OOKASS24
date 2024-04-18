@@ -4,7 +4,7 @@ import org.junit.Test;
 
 import java.util.List;
 
-import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.assertEquals;
 
 public class JUnit_Test {
     @Test
@@ -13,7 +13,7 @@ public class JUnit_Test {
         hotels.openSession();
         List<Hotel> hotelList = hotels.getHotelByName("*");
         hotels.closeSession();
-        assertTrue("Nicht alle Hotels gefunden!" ,hotelList.size() == 11);
+        assertEquals("Nicht alle Hotels gefunden!", 11, hotelList.size());
     }
 
     @Test
@@ -22,7 +22,7 @@ public class JUnit_Test {
         hotels.openSession();
         List<Hotel> hotelList = hotels.getHotelByName("Hotel");
         hotels.closeSession();
-        assertTrue("Nicht alle Hotels gefunden!" ,hotelList.size() == 6);
+        assertEquals("Nicht alle Hotels gefunden!", 6, hotelList.size());
     }
 
     @Test
@@ -31,7 +31,7 @@ public class JUnit_Test {
         hotels.openSession();
         List<Hotel> hotelList = hotels.getHotelByName("Maritim");
         hotels.closeSession();
-        assertTrue("Hotel nicht gefunden!" ,hotelList.size() == 1);
+        assertEquals("Hotel nicht gefunden!", 1, hotelList.size());
     }
 
     @Test
@@ -40,7 +40,7 @@ public class JUnit_Test {
         hotels.openSession();
         List<Hotel> hotelList = hotels.getHotelByName("Maritim");
         hotels.closeSession();
-        assertTrue("Hotel nicht gefunden!" ,hotelList.get(0).getId().equals("2"));
+        assertEquals("Hotel nicht gefunden!", "2", hotelList.get(0).getId());
     }
 
     @Test
@@ -49,7 +49,7 @@ public class JUnit_Test {
         hotels.openSession();
         List<Hotel> hotelList = hotels.getHotelByName("Maritim");
         hotels.closeSession();
-        assertTrue("Hotel nicht gefunden!" ,hotelList.get(0).getName().equals("Maritim"));
+        assertEquals("Hotel nicht gefunden!", "Maritim", hotelList.get(0).getName());
     }
 
     @Test
@@ -58,7 +58,7 @@ public class JUnit_Test {
         hotels.openSession();
         List<Hotel> hotelList = hotels.getHotelByName("Maritim");
         hotels.closeSession();
-        assertTrue("Hotel nicht gefunden!" ,hotelList.get(0).getLocation().equals("Bonn"));
+        assertEquals("Hotel nicht gefunden!", "Bonn", hotelList.get(0).getLocation());
     }
 
 }
