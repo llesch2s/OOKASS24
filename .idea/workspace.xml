@@ -5,17 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8eec5bcc-940c-4ed5-aa61-73870d3cf9a0" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/hbrs/ooka/Buchungssystem/Caching/Cache.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/hbrs/ooka/Buchungssystem/Caching/Caching.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/hbrs/ooka/Buchungssystem/Control/HotelRetrieval.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/hbrs/ooka/Buchungssystem/Control/HotelSearch.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/hbrs/ooka/Buchungssystem/Control/Logger.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/hbrs/ooka/Buchungssystem/MainClass.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/hbrs/ooka/Buchungssystem/Model/Hotel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/JUnit_Test.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/hbrs/ooka/uebung1/DBAccess.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hbrs/ooka/Buchungssystem/DB/DBAccess.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,6 +26,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;petersohnm&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/llesch2s/OOKASS24.git&quot;,
+    &quot;accountId&quot;: &quot;8c2dc706-c25b-441d-9d22-cf563518dc1c&quot;
+  }
+}</component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 6
 }</component>
@@ -46,6 +51,12 @@
   "keyToString": {
     "Application.DBAccess.executor": "Run",
     "Application.MainClass.executor": "Run",
+    "JUnit.JUnit_Test.Test.executor": "Run",
+    "JUnit.JUnit_Test.executor": "Run",
+    "JUnit.JUnit_Test.testGetAllHotel.executor": "Run",
+    "JUnit.JUnit_Test.testGetHotelByName.executor": "Run",
+    "JUnit.JUnit_Test.testGetHotelByNameComplete.executor": "Run",
+    "JUnit.JUnit_Test.testGetHotelByName_ID.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
@@ -58,8 +69,8 @@
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
     "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -68,20 +79,7 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.MainClass">
-    <configuration name="DBAccess" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="org.hbrs.ooka.Buchungssystem.DB.DBAccess" />
-      <module name="OOKAAbgabeLukasLeschUeb1" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.hbrs.ooka.Buchungssystem.DB.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="JUnit.JUnit_Test">
     <configuration name="MainClass" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.hbrs.ooka.Buchungssystem.MainClass" />
       <module name="OOKAAbgabeLukasLeschUeb1" />
@@ -95,35 +93,60 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="OOKAUe1-1.0-SNAPSHOT.jar" type="JarApplication" temporary="true">
-      <option name="JAR_PATH" value="$PROJECT_DIR$/target/OOKAUe1-1.0-SNAPSHOT.jar" />
-      <method v="2" />
-    </configuration>
-    <configuration default="true" type="JetRunConfigurationType">
+    <configuration name="JUnit_Test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="OOKAAbgabeLukasLeschUeb1" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="JUnit_Test" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+    <configuration name="JUnit_Test.testGetHotelByName_ID" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="OOKAAbgabeLukasLeschUeb1" />
-      <option name="filePath" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="JUnit_Test" />
+      <option name="METHOD_NAME" value="testGetHotelByName_ID" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="JUnit_Test.testGetHotelByName_Location" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="OOKAAbgabeLukasLeschUeb1" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="JUnit_Test" />
+      <option name="METHOD_NAME" value="testGetHotelByName_Location" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="JUnit_Test.testGetHotelByName_Name" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="OOKAAbgabeLukasLeschUeb1" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="JUnit_Test" />
+      <option name="METHOD_NAME" value="testGetHotelByName_Name" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.JUnit_Test" />
+        <item itemvalue="JUnit.JUnit_Test.testGetHotelByName_Location" />
+        <item itemvalue="JUnit.JUnit_Test.testGetHotelByName_Name" />
+        <item itemvalue="JUnit.JUnit_Test.testGetHotelByName_ID" />
         <item itemvalue="Application.MainClass" />
-        <item itemvalue="Application.DBAccess" />
-        <item itemvalue="JAR Application.OOKAUe1-1.0-SNAPSHOT.jar" />
       </list>
     </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="jdk-20.0.2-corretto-20.0.2.1-249ae16d76d6-478b1d29" />
+        <option value="bundled-jdk-9f38398b9061-18abd8497189-intellij.indexing.shared.core-IU-241.14494.240" />
+        <option value="bundled-js-predefined-1d06a55b98c1-74d2a5396914-JavaScript-IU-241.14494.240" />
       </set>
     </attachedChunks>
   </component>
@@ -137,6 +160,7 @@
       <updated>1712646061979</updated>
       <workItem from="1712646063028" duration="8337000" />
       <workItem from="1713003032295" duration="15312000" />
+      <workItem from="1713440330847" duration="12347000" />
     </task>
     <servers />
   </component>
