@@ -31,6 +31,7 @@ public class Cache implements Caching{
        } catch(NullPointerException n){
           System.out.println("Kein Hotel mit Schlüssel: "+key+" vorhanden");
        }
-       return null;
+       // scheinbarer zugriff ohne nullpointer
+       return new ArrayList<String>();
     }
 }
