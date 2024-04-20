@@ -1,4 +1,5 @@
-import org.hbrs.ooka.Buchungssystem.Control.HotelRetrieval;
+import org.hbrs.ooka.Buchungssystem.Control.HotelRetrievalProxy;
+import org.hbrs.ooka.Buchungssystem.Control.HotelRetrievalProxyImplementation;
 import org.hbrs.ooka.Buchungssystem.Model.Hotel;
 import org.junit.Test;
 
@@ -9,7 +10,7 @@ import static org.junit.Assert.assertEquals;
 public class JUnit_Test {
     @Test
     public void testGetAllHotels(){
-        HotelRetrieval hotels = new HotelRetrieval();
+        HotelRetrievalProxy hotels = new HotelRetrievalProxyImplementation();
         hotels.openSession();
         List<Hotel> hotelList = hotels.getHotelByName("*");
         hotels.closeSession();
@@ -18,7 +19,7 @@ public class JUnit_Test {
 
     @Test
     public void testGetHotelsNamedHotel(){
-        HotelRetrieval hotels = new HotelRetrieval();
+        HotelRetrievalProxy hotels = new HotelRetrievalProxyImplementation();
         hotels.openSession();
         List<Hotel> hotelList = hotels.getHotelByName("Hotel");
         hotels.closeSession();
@@ -27,7 +28,7 @@ public class JUnit_Test {
 
     @Test
     public void testGetHotelByName(){
-        HotelRetrieval hotels = new HotelRetrieval();
+        HotelRetrievalProxy hotels = new HotelRetrievalProxyImplementation();
         hotels.openSession();
         List<Hotel> hotelList = hotels.getHotelByName("Maritim");
         hotels.closeSession();
@@ -36,7 +37,7 @@ public class JUnit_Test {
 
     @Test
     public void testGetHotelByName_ID(){
-        HotelRetrieval hotels = new HotelRetrieval();
+        HotelRetrievalProxy hotels = new HotelRetrievalProxyImplementation();
         hotels.openSession();
         List<Hotel> hotelList = hotels.getHotelByName("Maritim");
         hotels.closeSession();
@@ -45,7 +46,7 @@ public class JUnit_Test {
 
     @Test
     public void testGetHotelByName_Name(){
-        HotelRetrieval hotels = new HotelRetrieval();
+        HotelRetrievalProxy hotels = new HotelRetrievalProxyImplementation();
         hotels.openSession();
         List<Hotel> hotelList = hotels.getHotelByName("Maritim");
         hotels.closeSession();
@@ -54,7 +55,7 @@ public class JUnit_Test {
 
     @Test
     public void testGetHotelByName_Location(){
-        HotelRetrieval hotels = new HotelRetrieval();
+        HotelRetrievalProxy hotels = new HotelRetrievalProxyImplementation();
         hotels.openSession();
         List<Hotel> hotelList = hotels.getHotelByName("Maritim");
         hotels.closeSession();
