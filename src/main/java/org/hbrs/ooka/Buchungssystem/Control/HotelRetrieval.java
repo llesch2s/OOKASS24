@@ -8,7 +8,7 @@ import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.List;
 
-public class HotelRetrieval implements HotelSearch{
+class HotelRetrieval implements HotelSearch{
          private  DBAccess acc;
          private Cache localCacheInstance;
     public HotelRetrieval(){

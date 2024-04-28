@@ -1,6 +1,8 @@
 package org.hbrs.ooka.Buchungssystem;
 
-import org.hbrs.ooka.Buchungssystem.Control.HotelRetrieval;
+
+import org.hbrs.ooka.Buchungssystem.Control.HotelRetrievalProxy;
+import org.hbrs.ooka.Buchungssystem.Control.HotelRetrievalProxyImplementation;
 import org.hbrs.ooka.Buchungssystem.DB.DBAccess;
 import org.hbrs.ooka.Buchungssystem.Model.Hotel;
 
@@ -9,7 +11,7 @@ import java.util.List;
 public class MainClass {
 
     public static  void main(String[] args){
-         HotelRetrieval hotelRetrieval = new HotelRetrieval();
+         HotelRetrievalProxy hotelRetrieval = new HotelRetrievalProxyImplementation();
          hotelRetrieval.openSession();
          List<Hotel> listHotelRetrievalResults = hotelRetrieval.getHotelByName("*");
          for(Hotel h:listHotelRetrievalResults){
