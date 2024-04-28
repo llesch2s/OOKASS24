@@ -18,5 +18,6 @@ public class MainClass {
              System.out.println("Location:"+h.getLocation());
          }
          hotelRetrieval.closeSession();
+
     }
 }

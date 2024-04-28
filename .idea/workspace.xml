@@ -1,11 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="OOKAAbgabeLukasLeschUeb1:jar" />
+    </artifacts-to-build>
+  </component>
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8eec5bcc-940c-4ed5-aa61-73870d3cf9a0" name="Changes" comment="UnitTest">
-      <change beforePath="$PROJECT_DIR$/src/test/java/JUnit_Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/JUnit_Test.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/artifacts/OOKAAbgabeLukasLeschUeb1_jar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/META-INF/MANIFEST.MF" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/hbrs/ooka/Buchungssystem/MainClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hbrs/ooka/Buchungssystem/MainClass.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,6 +44,9 @@
     &quot;accountId&quot;: &quot;8c2dc706-c25b-441d-9d22-cf563518dc1c&quot;
   }
 }</component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 6
 }</component>
@@ -48,6 +60,7 @@
   "keyToString": {
     "Application.DBAccess.executor": "Run",
     "Application.MainClass.executor": "Run",
+    "JAR Application.RunHotel.executor": "Run",
     "JUnit.JUnit_Test.Test.executor": "Run",
     "JUnit.JUnit_Test.executor": "Run",
     "JUnit.JUnit_Test.testGetAllHotel.executor": "Run",
@@ -62,12 +75,13 @@
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "master",
     "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/lukas/IdeaProjects/OOKASS24/out/artifacts/OOKAAbgabeLukasLeschUeb1_jar/OOKAAbgabeLukasLeschUeb1.jar",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Modules",
+    "project.structure.last.edited": "Artifacts",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
     "vue.rearranger.settings.migration": "true"
@@ -78,7 +92,7 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.JUnit_Test.testGetHotelByName_Location">
+  <component name="RunManager" selected="JAR Application.RunHotel">
     <configuration name="MainClass" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.hbrs.ooka.Buchungssystem.MainClass" />
       <module name="OOKAAbgabeLukasLeschUeb1" />
@@ -96,6 +110,7 @@
       <module name="OOKAAbgabeLukasLeschUeb1" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="JUnit_Test" />
+      <option name="METHOD_NAME" value="" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -131,21 +146,38 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="RunHotel" type="JarApplication">
+      <option name="JAR_PATH" value="$PROJECT_DIR$/out/artifacts/OOKAAbgabeLukasLeschUeb1_jar/OOKAAbgabeLukasLeschUeb1.jar" />
+      <option name="WORKING_DIRECTORY" value="C:\Users\lukas\IdeaProjects\OOKASS24" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <method v="2">
+        <option name="BuildArtifacts" enabled="true">
+          <artifact name="OOKAAbgabeLukasLeschUeb1:jar" />
+        </option>
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.MainClass" />
+      <item itemvalue="JAR Application.RunHotel" />
+      <item itemvalue="JUnit.JUnit_Test" />
+      <item itemvalue="JUnit.JUnit_Test.testGetHotelByName_ID" />
+      <item itemvalue="JUnit.JUnit_Test.testGetHotelByName_Location" />
+      <item itemvalue="JUnit.JUnit_Test.testGetHotelByName_Name" />
+    </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.JUnit_Test.testGetHotelByName_Location" />
+        <item itemvalue="Application.MainClass" />
         <item itemvalue="JUnit.JUnit_Test" />
+        <item itemvalue="JUnit.JUnit_Test.testGetHotelByName_Location" />
         <item itemvalue="JUnit.JUnit_Test.testGetHotelByName_Name" />
         <item itemvalue="JUnit.JUnit_Test.testGetHotelByName_ID" />
-        <item itemvalue="Application.MainClass" />
       </list>
     </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-jdk-9f38398b9061-18abd8497189-intellij.indexing.shared.core-IU-241.14494.240" />
-        <option value="bundled-js-predefined-1d06a55b98c1-74d2a5396914-JavaScript-IU-241.14494.240" />
+        <option value="jdk-22-openjdk-22-4caba194b151-f504ca98" />
       </set>
     </attachedChunks>
   </component>
@@ -160,6 +192,7 @@
       <workItem from="1712646063028" duration="8337000" />
       <workItem from="1713003032295" duration="15312000" />
       <workItem from="1713440330847" duration="12718000" />
+      <workItem from="1714297185689" duration="4354000" />
     </task>
     <task id="LOCAL-00001" summary="UnitTest">
       <option name="closed" value="true" />
@@ -177,6 +210,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="UnitTest" />
-    <option name="LAST_COMMIT_MESSAGE" value="UnitTest" />
+    <MESSAGE value="Commit return empty cache without nullpointer" />
+    <option name="LAST_COMMIT_MESSAGE" value="Commit return empty cache without nullpointer" />
   </component>
 </project>
