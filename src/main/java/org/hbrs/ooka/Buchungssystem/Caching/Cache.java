@@ -2,7 +2,6 @@ package org.hbrs.ooka.Buchungssystem.Caching;
 
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.LinkedList;
 import java.util.List;
 
 public class Cache implements Caching{
@@ -15,7 +14,7 @@ public class Cache implements Caching{
 
     public static Cache getCache(){
         if(cache == null){
-            return new Cache();
+            cache = new Cache();
         }
         return cache;
     }

@@ -12,10 +12,11 @@ public class DBAccess {
 
 	private String url = "jdbc:postgresql://dumbo.inf.h-brs.de/demouser";
 	
-	private Connection conn;
+//	private Connection conn;
+	ThreadLocal<Connection> conn = new ThreadLocal<>();
 	
 	public DBAccess() {   
-		
+		//openConnection();
 	} 
 
 	public static void main(String[] args) {
@@ -59,7 +60,8 @@ public class DBAccess {
 		  props.setProperty("password","demouser");
 
 		  try {
-			 this.conn = DriverManager.getConnection(url, props);
+			// this.conn = DriverManager.getConnection(url, props);
+			  conn.set(DriverManager.getConnection(url, props));
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -75,7 +77,8 @@ public class DBAccess {
 			value = "";
 		}
 		try {
-			st = conn.createStatement();
+			//st = conn.createStatement();
+			st = conn.get().createStatement();
 			rs = st.executeQuery("SELECT * FROM buchungsystem.hotel " +
 					"WHERE buchungsystem.hotel.name ilike " + "\'%" + value +  "%\'" );
 			while (rs.next() ){
@@ -93,7 +96,8 @@ public class DBAccess {
 	
 	public void closeConnection(){
 		   try {
-			conn.close();
+			   conn.get().close();
+			//conn.close();
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
