@@ -2,6 +2,7 @@ package Afg2RuntimeEnviornment;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.concurrent.atomic.AtomicBoolean;
 
 public class RunEnvironment {
     private class Status{
@@ -31,15 +32,32 @@ public class RunEnvironment {
     }
     private HashMap<Status,RunComponent> threadHashMap=null;
     private int laufendeNummer = 1;
+    private final AtomicBoolean running = new AtomicBoolean(false);
     public RunEnvironment(){
-        threadHashMap = new HashMap<>();
+
     }
     public void deployComponent(String pathToJar,String name){
-        RunComponent intrc=new RunComponent();
-        intrc.deployComponentWithPath(pathToJar);
-        threadHashMap.put(new Status(laufendeNummer++,name,"notRunning"),intrc);
+        if(running.get()) {
+            RunComponent intrc = new RunComponent();
+            intrc.deployComponentWithPath(pathToJar);
+            threadHashMap.put(new Status(laufendeNummer++, name, "notRunning"), intrc);
+        }else{
+            throw new RuntimeException("Laufzeitumgegbung nicht gestartet");
+        }
+    }
+    public void unDeployComponent(int id){
+            Map.Entry<Status, RunComponent> intsrc = iterateOverHashMap(id);
+            if(intsrc==null){
+                throw new NullPointerException("Element mit id:"+id+" existiert nicht!");
+            }
+            Object ret = threadHashMap.remove(intsrc.getKey());
+
     }
     private Map.Entry<Status,RunComponent> iterateOverHashMap(int id){
+        if(threadHashMap.isEmpty()){
+            System.out.println("Keine Components vorhanden");
+            return null;
+        }
         for(Map.Entry<Status,RunComponent> entry:threadHashMap.entrySet()){
             if(entry.getKey().id==id){
                 return entry;
@@ -52,11 +70,17 @@ public class RunEnvironment {
     }
     public void startComponent(int id){
           Map.Entry<Status,RunComponent> intsrc= iterateOverHashMap(id);
+          if(intsrc==null){
+              throw new NullPointerException("Element mit id:"+id+" existiert nicht!");
+          }
           intsrc.getKey().setZustand("Running");
           intsrc.getValue().start();
     }
     public void stopComponent(int id){
         Map.Entry<Status,RunComponent> intsrc= iterateOverHashMap(id);
+        if(intsrc==null){
+            throw new NullPointerException("Element mit id:"+id+" existiert nicht!");
+        }
         intsrc.getKey().setZustand("notRunning");
         intsrc.getValue().stop();
     }
@@ -64,10 +88,20 @@ public class RunEnvironment {
         iterateOverHashMap(-1);
     }
 
+    public void startEnviornment(){
+        running.set(true);
+        threadHashMap = new HashMap<>();
+    }
+    public void stopEnviornment(){
+       threadHashMap.clear();
+       running.set(false);
+    }
+
     public static void main(String[] args) {
 
         String pathToJar = "C:/Users/lukas/IdeaProjects/OOKASS24/out/artifacts/OOKAAbgabeLukasLeschUeb1_jar/OOKAAbgabeLukasLeschUeb1.jar";
         RunEnvironment rv = new RunEnvironment();
+        rv.startEnviornment();
         rv.deployComponent(pathToJar,"Thread1");
         rv.deployComponent(pathToJar,"Thread2");
         rv.deployComponent(pathToJar,"Thread3");
@@ -80,7 +114,11 @@ public class RunEnvironment {
         rv.stopComponent(2);
         rv.stopComponent(3);
         rv.getStatus();
-
+        rv.unDeployComponent(1);
+        rv.unDeployComponent(2);
+        rv.unDeployComponent(3);
+        rv.getStatus();
+        rv.stopEnviornment();
     }
 
 }

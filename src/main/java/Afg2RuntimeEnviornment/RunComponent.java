@@ -12,7 +12,7 @@ import java.util.jar.Manifest;
 
 public class RunComponent implements Runnable{
 
-    private Class componentToBeRun = null;
+    private Class<?> componentToBeRun = null;
     private Thread internalThread;
     private final AtomicBoolean running = new AtomicBoolean(false);
 
@@ -77,18 +77,13 @@ public class RunComponent implements Runnable{
             System.out.println(value);
             componentToBeRun = cl.loadClass(value);
 
-            //componentToBeRun = (MainClass) c.newInstance();
-
-        } catch (ClassNotFoundException ex) {
+        } catch (ClassNotFoundException | IOException ex) {
             throw new RuntimeException(ex);
-       // } catch (InstantiationException ex) {
-       //     throw new RuntimeException(ex);
-       // } catch (IllegalAccessException ex) {
-       //     throw new RuntimeException(ex);
-        } catch (IOException ex) {
-            throw new RuntimeException(ex);
+        } catch (NullPointerException npe){
+               System.out.println("Kein Manifast MF vorhanden");
         }
     }
+
 
 
 }
