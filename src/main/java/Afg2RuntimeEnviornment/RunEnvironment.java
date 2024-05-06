@@ -33,6 +33,7 @@ public class RunEnvironment {
     private HashMap<Status,RunComponent> threadHashMap=null;
     private int laufendeNummer = 1;
     private final AtomicBoolean running = new AtomicBoolean(false);
+    private String[] components;
     public RunEnvironment(){
 
     }
@@ -54,6 +55,8 @@ public class RunEnvironment {
 
     }
     private Map.Entry<Status,RunComponent> iterateOverHashMap(int id){
+        components = new String[threadHashMap.size()];
+        int i = 0;
         if(threadHashMap.isEmpty()){
             System.out.println("Keine Components vorhanden");
             return null;
@@ -64,6 +67,8 @@ public class RunEnvironment {
             }
             if(id==-1){
                 System.out.println(entry.getKey().id+"\n"+entry.getKey().name+"\n"+entry.getKey().zustand);
+                components [i] = entry.getKey().id+" - "+entry.getKey().name+" - "+ entry.getKey().zustand;
+                i++;
             }
         }
         return null;
@@ -85,8 +90,9 @@ public class RunEnvironment {
         intsrc.getKey().setZustand("notRunning");
         intsrc.getValue().stop();
     }
-    public void getStatus(){
+    public String[] getStatus(){
         iterateOverHashMap(-1);
+        return components;
     }
 
     public void startEnviornment(){
@@ -98,9 +104,11 @@ public class RunEnvironment {
        running.set(false);
     }
 
+    public String environmentStatus(){ return running.toString(); }
+
     public static void main(String[] args) {
 
-        String pathToJar = "C:/Users/lukas/IdeaProjects/OOKASS24/out/artifacts/OOKAAbgabeLukasLeschUeb1_jar/OOKAAbgabeLukasLeschUeb1.jar";
+        String pathToJar = System.getProperty("user.home") + "/IdeaProjects/OOKASS24/out/artifacts/OOKAAbgabeLukasLeschUeb1_jar/OOKAAbgabeLukasLeschUeb1.jar";
         RunEnvironment rv = new RunEnvironment();
         rv.startEnviornment();
         rv.deployComponent(pathToJar,"Thread1");
