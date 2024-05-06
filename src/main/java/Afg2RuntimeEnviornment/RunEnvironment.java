@@ -75,6 +75,7 @@ public class RunEnvironment {
           }
           intsrc.getKey().setZustand("Running");
           intsrc.getValue().start();
+
     }
     public void stopComponent(int id){
         Map.Entry<Status,RunComponent> intsrc= iterateOverHashMap(id);

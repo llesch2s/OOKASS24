@@ -9,7 +9,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8eec5bcc-940c-4ed5-aa61-73870d3cf9a0" name="Changes" comment="Runtime Enviornment erster Versuch">
+    <list default="true" id="8eec5bcc-940c-4ed5-aa61-73870d3cf9a0" name="Changes" comment="Runtime Enviornment Start/stop für enviornment hinzugefuegt">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Afg2RuntimeEnviornment/RunComponent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Afg2RuntimeEnviornment/RunComponent.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Afg2RuntimeEnviornment/RunEnvironment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Afg2RuntimeEnviornment/RunEnvironment.java" afterDir="false" />
@@ -204,7 +204,7 @@
       <workItem from="1714312527158" duration="9482000" />
       <workItem from="1714389304253" duration="13163000" />
       <workItem from="1714824904091" duration="834000" />
-      <workItem from="1714825783302" duration="1513000" />
+      <workItem from="1714825783302" duration="3028000" />
     </task>
     <task id="LOCAL-00001" summary="UnitTest">
       <option name="closed" value="true" />
@@ -230,7 +230,15 @@
       <option name="project" value="LOCAL" />
       <updated>1714478687890</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Runtime Enviornment Start/stop für enviornment hinzugefuegt">
+      <option name="closed" value="true" />
+      <created>1714827377806</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1714827377806</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -241,7 +249,8 @@
     <MESSAGE value="Commit return empty cache without nullpointer" />
     <MESSAGE value="Jar file included" />
     <MESSAGE value="Runtime Enviornment erster Versuch" />
-    <option name="LAST_COMMIT_MESSAGE" value="Runtime Enviornment erster Versuch" />
+    <MESSAGE value="Runtime Enviornment Start/stop für enviornment hinzugefuegt" />
+    <option name="LAST_COMMIT_MESSAGE" value="Runtime Enviornment Start/stop für enviornment hinzugefuegt" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
