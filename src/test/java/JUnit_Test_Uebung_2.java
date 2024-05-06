@@ -74,7 +74,7 @@ public class JUnit_Test_Uebung_2 {
     public void testIsolatedComponents(){
         RunEnvironment testRV = new RunEnvironment();
         String testJar = System.getProperty("user.home") + "/IdeaProjects/OOKASS24/out/artifacts/OOKAAbgabeLukasLeschUeb1_jar/OOKAAbgabeLukasLeschUeb1.jar";
-        String testArray = "";
+        String testArray;
         testRV.startEnviornment();
 
         testRV.deployComponent(testJar,"Test1");

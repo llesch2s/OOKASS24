@@ -7,7 +7,7 @@ import java.util.List;
 
 import static org.junit.Assert.assertEquals;
 
-public class JUnit_Test {
+public class JUnit_Test_Uebung_1 {
     @Test
     public void testGetAllHotels(){
         HotelRetrievalProxy hotels = new HotelRetrievalProxyImplementation();

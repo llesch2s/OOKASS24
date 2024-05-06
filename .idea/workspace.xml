@@ -10,9 +10,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8eec5bcc-940c-4ed5-aa61-73870d3cf9a0" name="Changes" comment="Runtime Enviornment Start/stop für enviornment hinzugefuegt">
+      <change afterPath="$PROJECT_DIR$/src/test/java/JUnit_Test_Uebung_2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Afg2RuntimeEnviornment/RunComponent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Afg2RuntimeEnviornment/RunComponent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Afg2RuntimeEnviornment/RunEnvironment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Afg2RuntimeEnviornment/RunEnvironment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/JUnit_Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/JUnit_Test_Uebung_1.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,97 +60,98 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.DBAccess.executor&quot;: &quot;Run&quot;,
-    &quot;Application.MainClass.executor&quot;: &quot;Run&quot;,
-    &quot;Application.RunEnvironment.executor&quot;: &quot;Run&quot;,
-    &quot;JAR Application.RunHotel.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.JUnit_Test.Test.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.JUnit_Test.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.JUnit_Test.testGetAllHotel.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.JUnit_Test.testGetHotelByName.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.JUnit_Test.testGetHotelByNameComplete.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.JUnit_Test.testGetHotelByName_ID.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.JUnit_Test.testGetHotelByName_Location.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.JUnit_Test.testGetHotelByName_Name.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;openjdk-22&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/lukas/IdeaProjects/OOKASS24/out/artifacts/OOKAAbgabeLukasLeschUeb1_jar/OOKAAbgabeLukasLeschUeb1.jar&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Artifacts&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.project.maven.archetype.catalogs&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.DBAccess.executor": "Run",
+    "Application.MainClass.executor": "Run",
+    "Application.RunEnvironment.executor": "Run",
+    "JAR Application.RunHotel.executor": "Run",
+    "JUnit.JUnit_Test.Test.executor": "Run",
+    "JUnit.JUnit_Test.executor": "Run",
+    "JUnit.JUnit_Test.testGetAllHotel.executor": "Run",
+    "JUnit.JUnit_Test.testGetHotelByName.executor": "Run",
+    "JUnit.JUnit_Test.testGetHotelByNameComplete.executor": "Run",
+    "JUnit.JUnit_Test.testGetHotelByName_ID.executor": "Run",
+    "JUnit.JUnit_Test.testGetHotelByName_Location.executor": "Run",
+    "JUnit.JUnit_Test.testGetHotelByName_Name.executor": "Run",
+    "JUnit.JUnit_Test_Uebung_2.executor": "Run",
+    "JUnit.JUnit_Test_Uebung_2.testDeployComponent.executor": "Run",
+    "JUnit.JUnit_Test_Uebung_2.testIsolatedComponents.executor": "Run",
+    "JUnit.JUnit_Test_Uebung_2.testIsolierteComponent.executor": "Run",
+    "JUnit.JUnit_Test_Uebung_2.testStartComponent.executor": "Run",
+    "JUnit.JUnit_Test_Uebung_2.testStartEnvironment.executor": "Run",
+    "JUnit.JUnit_Test_Uebung_2.testStopComponent.executor": "Run",
+    "JUnit.JUnit_Test_Uebung_2.testUnDeployComponent.executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "master",
+    "jdk.selected.JAVA_MODULE": "openjdk-22",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/lukas/IdeaProjects/OOKASS24/out/artifacts/OOKAAbgabeLukasLeschUeb1_jar/OOKAAbgabeLukasLeschUeb1.jar",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Artifacts",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "reference.settings.project.maven.archetype.catalogs",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.RunEnvironment">
-    <configuration name="MainClass" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="org.hbrs.ooka.Buchungssystem.MainClass" />
-      <module name="OOKAAbgabeLukasLeschUeb1" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.hbrs.ooka.Buchungssystem.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="RunEnvironment" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Afg2RuntimeEnviornment.RunEnvironment" />
-      <module name="OOKAAbgabeLukasLeschUeb1" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Afg2RuntimeEnviornment.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="JUnit_Test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.JUnit_Test_Uebung_2">
+    <configuration name="JUnit_Test_Uebung_2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="OOKAAbgabeLukasLeschUeb1" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="JUnit_Test" />
-      <option name="METHOD_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="JUnit_Test_Uebung_2" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="JUnit_Test.testGetHotelByName_Location" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="JUnit_Test_Uebung_2.testIsolatedComponents" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="OOKAAbgabeLukasLeschUeb1" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="JUnit_Test" />
-      <option name="METHOD_NAME" value="testGetHotelByName_Location" />
+      <option name="MAIN_CLASS_NAME" value="JUnit_Test_Uebung_2" />
+      <option name="METHOD_NAME" value="testIsolatedComponents" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="JUnit_Test.testGetHotelByName_Name" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="JUnit_Test_Uebung_2.testIsolierteComponent" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="OOKAAbgabeLukasLeschUeb1" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="JUnit_Test" />
-      <option name="METHOD_NAME" value="testGetHotelByName_Name" />
+      <option name="MAIN_CLASS_NAME" value="JUnit_Test_Uebung_2" />
+      <option name="METHOD_NAME" value="testIsolierteComponent" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="JUnit_Test_Uebung_2.testStartEnvironment" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="OOKAAbgabeLukasLeschUeb1" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="JUnit_Test_Uebung_2" />
+      <option name="METHOD_NAME" value="testStartEnvironment" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="JUnit_Test_Uebung_2.testStopComponent" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="OOKAAbgabeLukasLeschUeb1" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="JUnit_Test_Uebung_2" />
+      <option name="METHOD_NAME" value="testStopComponent" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -164,20 +168,20 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.RunEnvironment" />
-      <item itemvalue="Application.MainClass" />
       <item itemvalue="JAR Application.RunHotel" />
-      <item itemvalue="JUnit.JUnit_Test" />
-      <item itemvalue="JUnit.JUnit_Test.testGetHotelByName_Location" />
-      <item itemvalue="JUnit.JUnit_Test.testGetHotelByName_Name" />
+      <item itemvalue="JUnit.JUnit_Test_Uebung_2" />
+      <item itemvalue="JUnit.JUnit_Test_Uebung_2.testIsolatedComponents" />
+      <item itemvalue="JUnit.JUnit_Test_Uebung_2.testIsolierteComponent" />
+      <item itemvalue="JUnit.JUnit_Test_Uebung_2.testStartEnvironment" />
+      <item itemvalue="JUnit.JUnit_Test_Uebung_2.testStopComponent" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.RunEnvironment" />
-        <item itemvalue="Application.MainClass" />
-        <item itemvalue="JUnit.JUnit_Test" />
-        <item itemvalue="JUnit.JUnit_Test.testGetHotelByName_Location" />
-        <item itemvalue="JUnit.JUnit_Test.testGetHotelByName_Name" />
+        <item itemvalue="JUnit.JUnit_Test_Uebung_2" />
+        <item itemvalue="JUnit.JUnit_Test_Uebung_2.testIsolatedComponents" />
+        <item itemvalue="JUnit.JUnit_Test_Uebung_2.testStopComponent" />
+        <item itemvalue="JUnit.JUnit_Test_Uebung_2.testIsolierteComponent" />
+        <item itemvalue="JUnit.JUnit_Test_Uebung_2.testStartEnvironment" />
       </list>
     </recent_temporary>
   </component>
