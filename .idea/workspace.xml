@@ -10,12 +10,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8eec5bcc-940c-4ed5-aa61-73870d3cf9a0" name="Changes" comment="Runtime Enviornment Start/stop für enviornment hinzugefuegt">
-      <change afterPath="$PROJECT_DIR$/src/test/java/JUnit_Test_Uebung_2.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Afg2RuntimeEnviornment/Inject.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Afg2RuntimeEnviornment/Logger.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Afg2RuntimeEnviornment/SaveConfigLocally.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/hbrs/ooka/Buchungssystem/Start.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/hbrs/ooka/Buchungssystem/Stop.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Afg2RuntimeEnviornment/RunComponent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Afg2RuntimeEnviornment/RunComponent.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Afg2RuntimeEnviornment/RunEnvironment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Afg2RuntimeEnviornment/RunEnvironment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/JUnit_Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/JUnit_Test_Uebung_1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/hbrs/ooka/Buchungssystem/MainClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hbrs/ooka/Buchungssystem/MainClass.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,6 +33,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Interface" />
+        <option value="AnnotationType" />
         <option value="Class" />
       </list>
     </option>
@@ -82,6 +87,7 @@
     "JUnit.JUnit_Test_Uebung_2.testStartEnvironment.executor": "Run",
     "JUnit.JUnit_Test_Uebung_2.testStopComponent.executor": "Run",
     "JUnit.JUnit_Test_Uebung_2.testUnDeployComponent.executor": "Run",
+    "Maven.OOKAAbgabeLukasLeschUeb1 [package].executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
@@ -98,7 +104,7 @@
     "project.structure.last.edited": "Artifacts",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "reference.settings.project.maven.archetype.catalogs",
+    "settings.editor.selected.configurable": "reference.projectsettings.compiler.javacompiler",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -107,7 +113,20 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.JUnit_Test_Uebung_2">
+  <component name="RunManager" selected="Application.RunEnvironment">
+    <configuration name="RunEnvironment" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Afg2RuntimeEnviornment.RunEnvironment" />
+      <module name="OOKAAbgabeLukasLeschUeb1" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.hbrs.ooka.Buchungssystem.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="JUnit_Test_Uebung_2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="OOKAAbgabeLukasLeschUeb1" />
       <option name="PACKAGE_NAME" value="" />
@@ -137,16 +156,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="JUnit_Test_Uebung_2.testStartEnvironment" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="OOKAAbgabeLukasLeschUeb1" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="JUnit_Test_Uebung_2" />
-      <option name="METHOD_NAME" value="testStartEnvironment" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="JUnit_Test_Uebung_2.testStopComponent" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="OOKAAbgabeLukasLeschUeb1" />
       <option name="PACKAGE_NAME" value="" />
@@ -168,20 +177,20 @@
       </method>
     </configuration>
     <list>
+      <item itemvalue="Application.RunEnvironment" />
       <item itemvalue="JAR Application.RunHotel" />
       <item itemvalue="JUnit.JUnit_Test_Uebung_2" />
       <item itemvalue="JUnit.JUnit_Test_Uebung_2.testIsolatedComponents" />
       <item itemvalue="JUnit.JUnit_Test_Uebung_2.testIsolierteComponent" />
-      <item itemvalue="JUnit.JUnit_Test_Uebung_2.testStartEnvironment" />
       <item itemvalue="JUnit.JUnit_Test_Uebung_2.testStopComponent" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.RunEnvironment" />
         <item itemvalue="JUnit.JUnit_Test_Uebung_2" />
         <item itemvalue="JUnit.JUnit_Test_Uebung_2.testIsolatedComponents" />
         <item itemvalue="JUnit.JUnit_Test_Uebung_2.testStopComponent" />
         <item itemvalue="JUnit.JUnit_Test_Uebung_2.testIsolierteComponent" />
-        <item itemvalue="JUnit.JUnit_Test_Uebung_2.testStartEnvironment" />
       </list>
     </recent_temporary>
   </component>
@@ -209,6 +218,9 @@
       <workItem from="1714389304253" duration="13163000" />
       <workItem from="1714824904091" duration="834000" />
       <workItem from="1714825783302" duration="3028000" />
+      <workItem from="1715071676290" duration="629000" />
+      <workItem from="1715079547219" duration="1909000" />
+      <workItem from="1715433732153" duration="9996000" />
     </task>
     <task id="LOCAL-00001" summary="UnitTest">
       <option name="closed" value="true" />
@@ -247,6 +259,17 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="UnitTest" />

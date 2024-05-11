@@ -9,7 +9,8 @@ public class RunEnvironment {
         private int id;
         private String name;
         private String zustand;
-        public Status(int id,String name,String zustand){
+        private String pathToJar;
+        public Status(int id,String name,String zustand,String pathToJar){
             this.id=id;
             this.name=name;
             this.zustand=zustand;
@@ -29,6 +30,12 @@ public class RunEnvironment {
         public String getZustand(){
             return zustand;
         }
+        public void setPathToJar(String pathToJar){
+         this.pathToJar = pathToJar;
+        }
+        public String getPathToJar(){
+            return pathToJar;
+        }
     }
     private HashMap<Status,RunComponent> threadHashMap=null;
     private int laufendeNummer = 1;
@@ -41,7 +48,9 @@ public class RunEnvironment {
         if(running.get()) {
             RunComponent intrc = new RunComponent();
             intrc.deployComponentWithPath(pathToJar);
-            threadHashMap.put(new Status(laufendeNummer++, name, "notRunning"), intrc);
+            Status newStatus = new Status(laufendeNummer++, name, "notRunning",pathToJar);
+            threadHashMap.put(newStatus, intrc);
+
         }else{
             throw new RuntimeException("Laufzeitumgegbung nicht gestartet");
         }
@@ -90,6 +99,29 @@ public class RunEnvironment {
         intsrc.getKey().setZustand("notRunning");
         intsrc.getValue().stop();
     }
+    public void injectLoggerIntoComponent(int id)  {
+        Map.Entry<Status,RunComponent> intsrc= iterateOverHashMap(id);
+        if(intsrc==null){
+            throw new NullPointerException("Element mit id:"+id+" existiert nicht!");
+        }
+        try {
+            intsrc.getValue().setLogger(new Logger());
+
+        }catch (NoSuchMethodException nsme){
+            System.out.println("Methode logger existiert nicht");
+        }
+    }
+    public void sendLogger(int id){
+        Map.Entry<Status,RunComponent> intsrc= iterateOverHashMap(id);
+        if(intsrc==null){
+            throw new NullPointerException("Element mit id:"+id+" existiert nicht!");
+        }
+        try {
+            intsrc.getValue().sendlogger();
+        }catch (NoSuchMethodException nsme){
+            System.out.println("Methode logger existiert nicht");
+        }
+    }
     public String[] getStatus(){
         iterateOverHashMap(-1);
         return components;
@@ -119,6 +151,12 @@ public class RunEnvironment {
         rv.startComponent(2);
         rv.startComponent(3);
         rv.getStatus();
+        rv.injectLoggerIntoComponent(1);
+        rv.injectLoggerIntoComponent(2);
+        rv.injectLoggerIntoComponent(3);
+        rv.sendLogger(1);
+        rv.sendLogger(2);
+        rv.sendLogger(3);
         rv.stopComponent(1);
         rv.stopComponent(2);
         rv.stopComponent(3);
