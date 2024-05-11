@@ -4,6 +4,8 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.concurrent.atomic.AtomicBoolean;
 
+import static java.lang.Integer.parseInt;
+
 public class RunEnvironment {
     private class Status{
         private int id;
@@ -14,6 +16,7 @@ public class RunEnvironment {
             this.id=id;
             this.name=name;
             this.zustand=zustand;
+            this.pathToJar=pathToJar;
         }
         public int getId(){
             return id;
@@ -44,6 +47,7 @@ public class RunEnvironment {
     private int laufendeNummer = 1;
     private final AtomicBoolean running = new AtomicBoolean(false);
     private String[] components;
+    private SaveConfigLocally saveConfigLocally = new SaveConfigLocally();
     public RunEnvironment(){
 
     }
@@ -53,6 +57,7 @@ public class RunEnvironment {
             intrc.deployComponentWithPath(pathToJar);
             int id = laufendeNummer++;
             Status newStatus = new Status(id, name, "notRunning",pathToJar);
+            saveConfigLocally.saveConfigLine(newStatus.toString());
             threadHashMap.put(newStatus, intrc);
 
         }else{
@@ -64,6 +69,7 @@ public class RunEnvironment {
             if(intsrc==null){
                 throw new NullPointerException("Element mit id:"+id+" existiert nicht!");
             }
+            saveConfigLocally.deleteConfigLine(intsrc.getKey().getId());
             Object ret = threadHashMap.remove(intsrc.getKey());
 
     }
@@ -91,7 +97,9 @@ public class RunEnvironment {
           if(intsrc==null){
               throw new NullPointerException("Element mit id:"+id+" existiert nicht!");
           }
-          intsrc.getKey().setZustand("Running");
+          Status locStatus= intsrc.getKey();
+          locStatus.setZustand("Running");
+          saveConfigLocally.updateConfigLine(locStatus.getId(),locStatus.toString());
           intsrc.getValue().start();
 
     }
@@ -100,7 +108,9 @@ public class RunEnvironment {
         if(intsrc==null){
             throw new NullPointerException("Element mit id:"+id+" existiert nicht!");
         }
-        intsrc.getKey().setZustand("notRunning");
+        Status locStatus= intsrc.getKey();
+        locStatus.setZustand("notRunning");
+        saveConfigLocally.updateConfigLine(locStatus.getId(),locStatus.toString());
         intsrc.getValue().stop();
     }
     public void injectLoggerIntoComponent(int id)  {
@@ -113,6 +123,24 @@ public class RunEnvironment {
 
         }catch (NoSuchMethodException nsme){
             System.out.println("Methode logger existiert nicht");
+        }
+    }
+    public void loadConfig(){
+        if(running.get()) {
+            String componentsString = saveConfigLocally.readConfig();
+            saveConfigLocally.emptyConfig();
+            String[] component = componentsString.split("\n");
+            int len = component.length;
+            for (int i = 0; i < len; i++) {
+                String[] configelements = component[i].split(":");
+                System.out.println(configelements[3]);
+                deployComponent(configelements[3]+":"+configelements[4], configelements[0]);
+                if (configelements[2].equals("Running")) {
+                    startComponent(parseInt(configelements[0]));
+                }
+            }
+        }else{
+            throw new RuntimeException("Laufzeitumgegbung nicht gestartet");
         }
     }
     public void sendLogger(int id){
@@ -143,10 +171,13 @@ public class RunEnvironment {
     public String environmentStatus(){ return running.toString(); }
 
     public static void main(String[] args) {
-
         String pathToJar = System.getProperty("user.home") + "/IdeaProjects/OOKASS24/out/artifacts/OOKAAbgabeLukasLeschUeb1_jar/OOKAAbgabeLukasLeschUeb1.jar";
+
         RunEnvironment rv = new RunEnvironment();
+        //rv.saveConfigLocally.emptyConfig();
         rv.startEnviornment();
+        rv.loadConfig();
+        /*
         rv.deployComponent(pathToJar,"Thread1");
         rv.deployComponent(pathToJar,"Thread2");
         rv.deployComponent(pathToJar,"Thread3");
@@ -154,6 +185,7 @@ public class RunEnvironment {
         rv.startComponent(1);
         rv.startComponent(2);
         rv.startComponent(3);
+        */
         rv.getStatus();
         rv.injectLoggerIntoComponent(1);
         rv.injectLoggerIntoComponent(2);
@@ -169,6 +201,7 @@ public class RunEnvironment {
         rv.unDeployComponent(2);
         rv.unDeployComponent(3);
         rv.getStatus();
+
         rv.stopEnviornment();
     }
 

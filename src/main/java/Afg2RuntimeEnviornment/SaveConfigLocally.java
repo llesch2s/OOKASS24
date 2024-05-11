@@ -1,11 +1,13 @@
 package Afg2RuntimeEnviornment;
 
 import java.io.*;
+import java.util.ArrayList;
+import java.util.List;
 
 public class SaveConfigLocally {
     private static final String FILE_NAME = "config.txt";
 
-    public static void saveConfig(String content) {
+    public static void saveConfigLine(String content) {
         try {
             File file = new File(System.getProperty("user.home"), FILE_NAME);
             FileWriter writer = new FileWriter(file,true);
@@ -31,6 +33,54 @@ public class SaveConfigLocally {
         }
         return content.toString();
     }
+    public static void updateConfigLine(int id, String newLine) {
+        try {
+            File file = new File(System.getProperty("user.home"), FILE_NAME);
+            BufferedReader reader = new BufferedReader(new FileReader(file));
+            List<String> lines = new ArrayList<>();
+            String line;
+            while ((line = reader.readLine()) != null) {
+                if (line.split(":")[0].equals(""+id)) {
+                    lines.add(newLine);
+                } else {
+                    lines.add(line);
+                }
+            }
+            reader.close();
+
+            FileWriter writer = new FileWriter(file);
+            for (String updatedLine : lines) {
+                writer.write(updatedLine + "\n");
+            }
+            writer.close();
+        } catch (IOException e) {
+            System.err.println(e.getMessage());
+        }
+    }
+    public static void deleteConfigLine(int id) {
+        try {
+            File file = new File(System.getProperty("user.home"), FILE_NAME);
+            BufferedReader reader = new BufferedReader(new FileReader(file));
+            List<String> lines = new ArrayList<>();
+            String line;
+            while ((line = reader.readLine()) != null) {
+                if (line.split(":")[0].equals(""+id)) {
+
+                } else {
+                    lines.add(line);
+                }
+            }
+            reader.close();
+
+            FileWriter writer = new FileWriter(file);
+            for (String updatedLine : lines) {
+                writer.write(updatedLine + "\n");
+            }
+            writer.close();
+        } catch (IOException e) {
+            System.err.println(e.getMessage());
+        }
+    }
     public static void emptyConfig() {
         try {
             File file = new File(System.getProperty("user.home"), FILE_NAME);
@@ -46,12 +96,16 @@ public class SaveConfigLocally {
         // Test the methods
         String configContent = "Setting1=Value1\nSetting2=Value2";
         emptyConfig();
-        saveConfig(configContent);
-        saveConfig(configContent);
-        saveConfig(configContent);
+        saveConfigLine("1:n:notrunning:path");
+        saveConfigLine("2:n:notrunning:path");
+        saveConfigLine("3:n:notrunning:path");
         String readContent = readConfig();
-        System.out.println("Content read from config file:");
         System.out.println(readContent);
+        System.out.println("*******************+");
+        updateConfigLine(1,"1:n:running:path");
+        readContent = readConfig();
+        System.out.println(readContent);
+
     }
 
 }

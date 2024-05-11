@@ -9,7 +9,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8eec5bcc-940c-4ed5-aa61-73870d3cf9a0" name="Changes" comment="Blatt 3 CR2 erledigt. Methoden können jetzt ausgeführt werden">
+    <list default="true" id="8eec5bcc-940c-4ed5-aa61-73870d3cf9a0" name="Changes" comment="Speicherklasse für config">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Afg2RuntimeEnviornment/RunEnvironment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Afg2RuntimeEnviornment/RunEnvironment.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Afg2RuntimeEnviornment/SaveConfigLocally.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Afg2RuntimeEnviornment/SaveConfigLocally.java" afterDir="false" />
@@ -108,7 +108,7 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.SaveConfigLocally">
+  <component name="RunManager" selected="Application.RunEnvironment">
     <configuration name="ConfigFile" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Afg2RuntimeEnviornment.ConfigFile" />
       <module name="OOKAAbgabeLukasLeschUeb1" />
@@ -187,9 +187,9 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.RunEnvironment" />
         <item itemvalue="Application.SaveConfigLocally" />
         <item itemvalue="Application.ConfigFile" />
-        <item itemvalue="Application.RunEnvironment" />
         <item itemvalue="JUnit.JUnit_Test_Uebung_2" />
         <item itemvalue="JUnit.JUnit_Test_Uebung_2.testIsolatedComponents" />
       </list>
@@ -221,7 +221,7 @@
       <workItem from="1714825783302" duration="3028000" />
       <workItem from="1715071676290" duration="629000" />
       <workItem from="1715079547219" duration="1909000" />
-      <workItem from="1715433732153" duration="14592000" />
+      <workItem from="1715433732153" duration="18784000" />
     </task>
     <task id="LOCAL-00001" summary="UnitTest">
       <option name="closed" value="true" />
@@ -263,7 +263,15 @@
       <option name="project" value="LOCAL" />
       <updated>1715444008825</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Speicherklasse für config">
+      <option name="closed" value="true" />
+      <created>1715448501182</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1715448501182</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -287,7 +295,8 @@
     <MESSAGE value="Runtime Enviornment erster Versuch" />
     <MESSAGE value="Runtime Enviornment Start/stop für enviornment hinzugefuegt" />
     <MESSAGE value="Blatt 3 CR2 erledigt. Methoden können jetzt ausgeführt werden" />
-    <option name="LAST_COMMIT_MESSAGE" value="Blatt 3 CR2 erledigt. Methoden können jetzt ausgeführt werden" />
+    <MESSAGE value="Speicherklasse für config" />
+    <option name="LAST_COMMIT_MESSAGE" value="Speicherklasse für config" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
