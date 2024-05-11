@@ -36,6 +36,9 @@ public class RunEnvironment {
         public String getPathToJar(){
             return pathToJar;
         }
+        public String toString(){
+            return id+":"+name+":"+zustand+":"+pathToJar;
+        }
     }
     private HashMap<Status,RunComponent> threadHashMap=null;
     private int laufendeNummer = 1;
@@ -48,7 +51,8 @@ public class RunEnvironment {
         if(running.get()) {
             RunComponent intrc = new RunComponent();
             intrc.deployComponentWithPath(pathToJar);
-            Status newStatus = new Status(laufendeNummer++, name, "notRunning",pathToJar);
+            int id = laufendeNummer++;
+            Status newStatus = new Status(id, name, "notRunning",pathToJar);
             threadHashMap.put(newStatus, intrc);
 
         }else{

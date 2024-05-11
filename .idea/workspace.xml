@@ -9,17 +9,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8eec5bcc-940c-4ed5-aa61-73870d3cf9a0" name="Changes" comment="Runtime Enviornment Start/stop für enviornment hinzugefuegt">
-      <change afterPath="$PROJECT_DIR$/src/main/java/Afg2RuntimeEnviornment/Inject.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Afg2RuntimeEnviornment/Logger.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Afg2RuntimeEnviornment/SaveConfigLocally.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/hbrs/ooka/Buchungssystem/Start.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/hbrs/ooka/Buchungssystem/Stop.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="8eec5bcc-940c-4ed5-aa61-73870d3cf9a0" name="Changes" comment="Blatt 3 CR2 erledigt. Methoden können jetzt ausgeführt werden">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Afg2RuntimeEnviornment/RunComponent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Afg2RuntimeEnviornment/RunComponent.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Afg2RuntimeEnviornment/RunEnvironment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Afg2RuntimeEnviornment/RunEnvironment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/hbrs/ooka/Buchungssystem/MainClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hbrs/ooka/Buchungssystem/MainClass.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Afg2RuntimeEnviornment/SaveConfigLocally.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Afg2RuntimeEnviornment/SaveConfigLocally.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,9 +60,11 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Application.ConfigFile.executor": "Run",
     "Application.DBAccess.executor": "Run",
     "Application.MainClass.executor": "Run",
     "Application.RunEnvironment.executor": "Run",
+    "Application.SaveConfigLocally.executor": "Run",
     "JAR Application.RunHotel.executor": "Run",
     "JUnit.JUnit_Test.Test.executor": "Run",
     "JUnit.JUnit_Test.executor": "Run",
@@ -113,13 +108,39 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.RunEnvironment">
+  <component name="RunManager" selected="Application.SaveConfigLocally">
+    <configuration name="ConfigFile" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Afg2RuntimeEnviornment.ConfigFile" />
+      <module name="OOKAAbgabeLukasLeschUeb1" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Afg2RuntimeEnviornment.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="RunEnvironment" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Afg2RuntimeEnviornment.RunEnvironment" />
       <module name="OOKAAbgabeLukasLeschUeb1" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="org.hbrs.ooka.Buchungssystem.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SaveConfigLocally" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Afg2RuntimeEnviornment.SaveConfigLocally" />
+      <module name="OOKAAbgabeLukasLeschUeb1" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Afg2RuntimeEnviornment.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -146,26 +167,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="JUnit_Test_Uebung_2.testIsolierteComponent" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="OOKAAbgabeLukasLeschUeb1" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="JUnit_Test_Uebung_2" />
-      <option name="METHOD_NAME" value="testIsolierteComponent" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="JUnit_Test_Uebung_2.testStopComponent" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="OOKAAbgabeLukasLeschUeb1" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="JUnit_Test_Uebung_2" />
-      <option name="METHOD_NAME" value="testStopComponent" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="RunHotel" type="JarApplication">
       <option name="JAR_PATH" value="$PROJECT_DIR$/out/artifacts/OOKAAbgabeLukasLeschUeb1_jar/OOKAAbgabeLukasLeschUeb1.jar" />
       <option name="WORKING_DIRECTORY" value="C:\Users\lukas\IdeaProjects\OOKASS24" />
@@ -177,20 +178,20 @@
       </method>
     </configuration>
     <list>
+      <item itemvalue="Application.ConfigFile" />
+      <item itemvalue="Application.SaveConfigLocally" />
       <item itemvalue="Application.RunEnvironment" />
       <item itemvalue="JAR Application.RunHotel" />
       <item itemvalue="JUnit.JUnit_Test_Uebung_2" />
       <item itemvalue="JUnit.JUnit_Test_Uebung_2.testIsolatedComponents" />
-      <item itemvalue="JUnit.JUnit_Test_Uebung_2.testIsolierteComponent" />
-      <item itemvalue="JUnit.JUnit_Test_Uebung_2.testStopComponent" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.SaveConfigLocally" />
+        <item itemvalue="Application.ConfigFile" />
         <item itemvalue="Application.RunEnvironment" />
         <item itemvalue="JUnit.JUnit_Test_Uebung_2" />
         <item itemvalue="JUnit.JUnit_Test_Uebung_2.testIsolatedComponents" />
-        <item itemvalue="JUnit.JUnit_Test_Uebung_2.testStopComponent" />
-        <item itemvalue="JUnit.JUnit_Test_Uebung_2.testIsolierteComponent" />
       </list>
     </recent_temporary>
   </component>
@@ -220,7 +221,7 @@
       <workItem from="1714825783302" duration="3028000" />
       <workItem from="1715071676290" duration="629000" />
       <workItem from="1715079547219" duration="1909000" />
-      <workItem from="1715433732153" duration="9996000" />
+      <workItem from="1715433732153" duration="14592000" />
     </task>
     <task id="LOCAL-00001" summary="UnitTest">
       <option name="closed" value="true" />
@@ -254,7 +255,15 @@
       <option name="project" value="LOCAL" />
       <updated>1714827377806</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Blatt 3 CR2 erledigt. Methoden können jetzt ausgeführt werden">
+      <option name="closed" value="true" />
+      <created>1715444008824</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1715444008825</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -277,7 +286,8 @@
     <MESSAGE value="Jar file included" />
     <MESSAGE value="Runtime Enviornment erster Versuch" />
     <MESSAGE value="Runtime Enviornment Start/stop für enviornment hinzugefuegt" />
-    <option name="LAST_COMMIT_MESSAGE" value="Runtime Enviornment Start/stop für enviornment hinzugefuegt" />
+    <MESSAGE value="Blatt 3 CR2 erledigt. Methoden können jetzt ausgeführt werden" />
+    <option name="LAST_COMMIT_MESSAGE" value="Blatt 3 CR2 erledigt. Methoden können jetzt ausgeführt werden" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
