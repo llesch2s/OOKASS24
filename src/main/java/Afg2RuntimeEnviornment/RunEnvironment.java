@@ -134,7 +134,7 @@ public class RunEnvironment {
             for (int i = 0; i < len; i++) {
                 String[] configelements = component[i].split(":");
                 System.out.println(configelements[3]);
-                deployComponent(configelements[3]+":"+configelements[4], configelements[0]);
+                deployComponent(configelements[3]+":"+configelements[4], configelements[1]);
                 if (configelements[2].equals("Running")) {
                     startComponent(parseInt(configelements[0]));
                 }

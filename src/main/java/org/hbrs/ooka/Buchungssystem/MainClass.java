@@ -35,7 +35,9 @@ public class MainClass {
     }
     @Stop
     public  void stop(){
-        hotelRetrieval.get().closeSession();
+
+            hotelRetrieval.get().closeSession();
+
     }
 
     public static void main(String[] args){
