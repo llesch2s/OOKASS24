@@ -10,16 +10,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8eec5bcc-940c-4ed5-aa61-73870d3cf9a0" name="Changes" comment="CR1 erster versuch">
-      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/artifacts/OOKAAbgabeLukasLeschUeb1_jar2.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/artifacts/OOKAAbgabeLukasLeschUeb1_jar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/OOKAAbgabeLukasLeschUeb1_jar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="8eec5bcc-940c-4ed5-aa61-73870d3cf9a0" name="Changes" comment="Fix: Doppelte Einträge in config.txt / &quot;:&quot; durch &quot;&gt;&quot; in config.txt ersetzt / NullPointerException bei openSession()">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/OOKAAbgabeLukasLeschUeb1_jar/OOKAAbgabeLukasLeschUeb1.jar" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/OOKAAbgabeLukasLeschUeb1_jar/OOKAAbgabeLukasLeschUeb1.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Afg2RuntimeEnviornment/RunComponent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Afg2RuntimeEnviornment/RunComponent.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Afg2RuntimeEnviornment/RunEnvironment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Afg2RuntimeEnviornment/RunEnvironment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Afg2RuntimeEnviornment/SaveConfigLocally.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Afg2RuntimeEnviornment/SaveConfigLocally.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -284,7 +277,15 @@
       <option name="project" value="LOCAL" />
       <updated>1715452792744</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Fix: Doppelte Einträge in config.txt / &quot;:&quot; durch &quot;&gt;&quot; in config.txt ersetzt / NullPointerException bei openSession()">
+      <option name="closed" value="true" />
+      <created>1715524764967</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1715524764967</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -310,7 +311,8 @@
     <MESSAGE value="Blatt 3 CR2 erledigt. Methoden können jetzt ausgeführt werden" />
     <MESSAGE value="Speicherklasse für config" />
     <MESSAGE value="CR1 erster versuch" />
-    <option name="LAST_COMMIT_MESSAGE" value="CR1 erster versuch" />
+    <MESSAGE value="Fix: Doppelte Einträge in config.txt / &quot;:&quot; durch &quot;&gt;&quot; in config.txt ersetzt / NullPointerException bei openSession()" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fix: Doppelte Einträge in config.txt / &quot;:&quot; durch &quot;&gt;&quot; in config.txt ersetzt / NullPointerException bei openSession()" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

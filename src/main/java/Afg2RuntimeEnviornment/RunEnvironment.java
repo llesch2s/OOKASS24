@@ -44,7 +44,7 @@ public class RunEnvironment {
             return pathToJar;
         }
         public String toString(){
-            return id+":"+name+":"+zustand+":"+pathToJar;
+            return id+">"+name+">"+zustand+">"+pathToJar;
         }
     }
     private HashMap<Status,RunComponent> threadHashMap=null;
@@ -83,19 +83,12 @@ public class RunEnvironment {
                     }
                     if(!componentExists)
                     {
-                        String status;
-                        status = newStatus.toString().replaceFirst(":", ">");
-                        status = status.replaceFirst(":", ">");
-                        status = status.replaceFirst(":", ">");
-                        saveConfigLocally.saveConfigLine(status);
+                        saveConfigLocally.saveConfigLine(newStatus.toString());
+
                     }
                 }
                 else {
-                    String status;
-                    status = newStatus.toString().replaceFirst(":", ">");
-                    status = status.replaceFirst(":", ">");
-                    status = status.replaceFirst(":", ">");
-                    saveConfigLocally.saveConfigLine(status);
+                    saveConfigLocally.saveConfigLine(newStatus.toString());
                 }
             } catch (IOException e) {
                 System.err.println(e.getMessage());
@@ -141,12 +134,8 @@ public class RunEnvironment {
           }
           Status locStatus= intsrc.getKey();
           locStatus.setZustand("Running");
-          String status;
-          status = locStatus.toString().replaceFirst(":",">");
-          status = status.replaceFirst(":",">");
-          status = status.replaceFirst(":",">");
-          saveConfigLocally.updateConfigLine(locStatus.getId(),status);
-          intsrc.getValue().start();
+        saveConfigLocally.updateConfigLine(locStatus.getId(),locStatus.toString());
+        intsrc.getValue().start();
 
     }
     public void stopComponent(int id){
@@ -156,11 +145,7 @@ public class RunEnvironment {
         }
         Status locStatus= intsrc.getKey();
         locStatus.setZustand("notRunning");
-        String status;
-        status = locStatus.toString().replaceFirst(":",">");
-        status = status.replaceFirst(":",">");
-        status = status.replaceFirst(":",">");
-        saveConfigLocally.updateConfigLine(locStatus.getId(),status);
+        saveConfigLocally.updateConfigLine(locStatus.getId(),locStatus.toString());
         intsrc.getValue().stop();
     }
     public void injectLoggerIntoComponent(int id)  {
