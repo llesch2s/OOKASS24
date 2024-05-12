@@ -1,5 +1,9 @@
 package Afg2RuntimeEnviornment;
 
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileReader;
+import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.concurrent.atomic.AtomicBoolean;
@@ -57,13 +61,51 @@ public class RunEnvironment {
             intrc.deployComponentWithPath(pathToJar);
             int id = laufendeNummer++;
             Status newStatus = new Status(id, name, "notRunning",pathToJar);
-            saveConfigLocally.saveConfigLine(newStatus.toString());
-            threadHashMap.put(newStatus, intrc);
+            boolean componentExists = false;
 
+            StringBuilder content = new StringBuilder();
+            try {
+                File file = new File(System.getProperty("user.home"), "config.txt");
+                BufferedReader reader = new BufferedReader(new FileReader(file));
+                String line;
+                while ((line = reader.readLine()) != null) {
+                    content.append(line).append("\n");
+                }
+                reader.close();
+                if(content != null && !content.isEmpty()) {
+                    String[] components = content.toString().split("\n");
+                    for (String component : components) {
+                        String[] ids = component.split(">");
+                        if (ids[0].equals("" + newStatus.getId())) {
+                            System.out.println("Komponente mit ID: " + newStatus.id + " ist bereits deployed!");
+                            componentExists = true;
+                        }
+                    }
+                    if(!componentExists)
+                    {
+                        String status;
+                        status = newStatus.toString().replaceFirst(":", ">");
+                        status = status.replaceFirst(":", ">");
+                        status = status.replaceFirst(":", ">");
+                        saveConfigLocally.saveConfigLine(status);
+                    }
+                }
+                else {
+                    String status;
+                    status = newStatus.toString().replaceFirst(":", ">");
+                    status = status.replaceFirst(":", ">");
+                    status = status.replaceFirst(":", ">");
+                    saveConfigLocally.saveConfigLine(status);
+                }
+            } catch (IOException e) {
+                System.err.println(e.getMessage());
+            }
+            threadHashMap.put(newStatus, intrc);
         }else{
             throw new RuntimeException("Laufzeitumgegbung nicht gestartet");
         }
     }
+
     public void unDeployComponent(int id){
             Map.Entry<Status, RunComponent> intsrc = iterateOverHashMap(id);
             if(intsrc==null){
@@ -99,7 +141,11 @@ public class RunEnvironment {
           }
           Status locStatus= intsrc.getKey();
           locStatus.setZustand("Running");
-          saveConfigLocally.updateConfigLine(locStatus.getId(),locStatus.toString());
+          String status;
+          status = locStatus.toString().replaceFirst(":",">");
+          status = status.replaceFirst(":",">");
+          status = status.replaceFirst(":",">");
+          saveConfigLocally.updateConfigLine(locStatus.getId(),status);
           intsrc.getValue().start();
 
     }
@@ -110,7 +156,11 @@ public class RunEnvironment {
         }
         Status locStatus= intsrc.getKey();
         locStatus.setZustand("notRunning");
-        saveConfigLocally.updateConfigLine(locStatus.getId(),locStatus.toString());
+        String status;
+        status = locStatus.toString().replaceFirst(":",">");
+        status = status.replaceFirst(":",">");
+        status = status.replaceFirst(":",">");
+        saveConfigLocally.updateConfigLine(locStatus.getId(),status);
         intsrc.getValue().stop();
     }
     public void injectLoggerIntoComponent(int id)  {
@@ -132,9 +182,10 @@ public class RunEnvironment {
             String[] component = componentsString.split("\n");
             int len = component.length;
             for (int i = 0; i < len; i++) {
-                String[] configelements = component[i].split(":");
+                String[] configelements = component[i].split(">");
                 System.out.println(configelements[3]);
-                deployComponent(configelements[3]+":"+configelements[4], configelements[1]);
+                deployComponent(configelements[3], configelements[1]);
+                //+"-"+configelements[4]
                 if (configelements[2].equals("Running")) {
                     startComponent(parseInt(configelements[0]));
                 }
@@ -176,8 +227,8 @@ public class RunEnvironment {
         RunEnvironment rv = new RunEnvironment();
         //rv.saveConfigLocally.emptyConfig();
         rv.startEnviornment();
-        rv.loadConfig();
-        /*
+        //rv.loadConfig();
+
         rv.deployComponent(pathToJar,"Thread1");
         rv.deployComponent(pathToJar,"Thread2");
         rv.deployComponent(pathToJar,"Thread3");
@@ -185,7 +236,7 @@ public class RunEnvironment {
         rv.startComponent(1);
         rv.startComponent(2);
         rv.startComponent(3);
-        */
+
         rv.getStatus();
         rv.injectLoggerIntoComponent(1);
         rv.injectLoggerIntoComponent(2);

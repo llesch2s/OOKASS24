@@ -25,9 +25,9 @@ public class RunComponent implements Runnable{
 
     public void stop() {
         try {
-           componentToBeRun.getClass().getMethod("stop").invoke(componentToBeRun);
+           componentToBeRun.getClass().getMethod("Stop").invoke(componentToBeRun);
 
-        }catch (NoSuchMethodException nsme){
+        }catch (NoSuchMethodException name){
 
         } catch (InvocationTargetException e) {
             throw new RuntimeException(e);
