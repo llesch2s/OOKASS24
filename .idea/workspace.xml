@@ -11,8 +11,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8eec5bcc-940c-4ed5-aa61-73870d3cf9a0" name="Changes" comment="Fix: Doppelte Einträge in config.txt / &quot;:&quot; durch &quot;&gt;&quot; in config.txt ersetzt / NullPointerException bei openSession()">
+      <change afterPath="$PROJECT_DIR$/Notizbuch öffnen.onetoc2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Notizbuch öffnen.onetoc2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Upload Docs/Übung_4_5/Architekurdiagramme_WirSchiffenDas_Lukas_Lesch_Martin_Petersohn.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Upload Docs/Übung_4_5/Bausteinsicht.uxf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Upload Docs/Übung_4_5/Bewertung Anti Pattern bei WirSchiffenDas.xlsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Upload Docs/Übung_4_5/Kontextsicht.uxf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Upload Docs/Übung_4_5/OOKA Übung Nr 4.docx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Upload Docs/Übung_4_5/Packagesicht.uxf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Upload Docs/Übung_4_5/Verteilungssicht.uxf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Notizbuch öffnen.onetoc2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Afg2RuntimeEnviornment/RunEnvironment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Afg2RuntimeEnviornment/RunEnvironment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Upload Docs/OOKAContextMapLukasLeschMartinPetersohn - Kopie.drawio" beforeDir="false" afterPath="$PROJECT_DIR$/src/Upload Docs/Übung_4_5/OOKAContextMapLukasLeschMartinPetersohn - Kopie.drawio" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,12 +52,12 @@
     &quot;assignee&quot;: &quot;petersohnm&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings">{
-  &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/llesch2s/OOKASS24.git&quot;,
-    &quot;accountId&quot;: &quot;8c2dc706-c25b-441d-9d22-cf563518dc1c&quot;
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/llesch2s/OOKASS24.git",
+    "accountId": "0e21e095-388e-41d5-abb0-d684fcda6b11"
   }
-}</component>
+}]]></component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
@@ -53,7 +65,9 @@
   &quot;associatedIndex&quot;: 6
 }</component>
   <component name="ProjectId" id="2eqxlcLgaf034JaEXxbncVZegt1" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -91,7 +105,7 @@
     "git-widget-placeholder": "master",
     "jdk.selected.JAVA_MODULE": "openjdk-22",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/mpete/IdeaProjects/OOKASS24/out/artifacts/OOKAAbgabeLukasLeschUeb2_jar",
+    "last_opened_file_path": "C:/Users/mpete/Desktop/HBRS/HBRS/2 Semester/OOKA/Code/OOKASS24/src/Upload Docs",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -220,6 +234,7 @@
       <workItem from="1715071676290" duration="629000" />
       <workItem from="1715079547219" duration="1909000" />
       <workItem from="1715433732153" duration="21464000" />
+      <workItem from="1716299639154" duration="369000" />
     </task>
     <task id="LOCAL-00001" summary="UnitTest">
       <option name="closed" value="true" />

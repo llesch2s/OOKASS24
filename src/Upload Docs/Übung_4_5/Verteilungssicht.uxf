@@ -1,0 +1,445 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="15.1">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLDeployment</id>
+    <coordinates>
+      <x>890</x>
+      <y>140</y>
+      <w>370</w>
+      <h>640</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;device&gt;&gt;
+*:Cloud*</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLDeployment</id>
+    <coordinates>
+      <x>530</x>
+      <y>160</y>
+      <w>220</w>
+      <h>210</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;device&gt;&gt;
+_*:Smartphone*_
+group=group-0</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLDeployment</id>
+    <coordinates>
+      <x>530</x>
+      <y>420</y>
+      <w>220</w>
+      <h>210</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;device&gt;&gt;
+_*:Desktop*_
+group=group-1</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLGeneric</id>
+    <coordinates>
+      <x>560</x>
+      <y>480</y>
+      <w>150</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;component&gt;&gt;
+_*:Web-UI*_
+group=group-1</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLGeneric</id>
+    <coordinates>
+      <x>560</x>
+      <y>550</y>
+      <w>150</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;component&gt;&gt;
+_*:Desktop-Client-UI*_
+group=group-1</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLGeneric</id>
+    <coordinates>
+      <x>560</x>
+      <y>290</y>
+      <w>150</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;component&gt;&gt;
+_*:App-UI*_
+group=group-0</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLGeneric</id>
+    <coordinates>
+      <x>560</x>
+      <y>220</y>
+      <w>150</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;component&gt;&gt;
+_*:Web-UI*_
+group=group-0</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLDeployment</id>
+    <coordinates>
+      <x>1460</x>
+      <y>160</y>
+      <w>200</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;device&gt;&gt;
+_*:DB-Server*_</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLDeployment</id>
+    <coordinates>
+      <x>930</x>
+      <y>200</y>
+      <w>290</w>
+      <h>560</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;execution environment&gt;&gt;
+_*:Virtual Machine*_</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLGeneric</id>
+    <coordinates>
+      <x>1000</x>
+      <y>310</y>
+      <w>140</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;microservice&gt;&gt;
+*Shipping Products*</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLGeneric</id>
+    <coordinates>
+      <x>970</x>
+      <y>480</y>
+      <w>200</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;microservice&gt;&gt;
+*Controlling and Analyzing*
+*Products and Customer (BI)*</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLGeneric</id>
+    <coordinates>
+      <x>970</x>
+      <y>550</y>
+      <w>200</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;microservice&gt;&gt;
+*Manufactoring Products*</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLGeneric</id>
+    <coordinates>
+      <x>1000</x>
+      <y>260</y>
+      <w>140</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;microservice&gt;&gt;
+*Billing of Products*</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLGeneric</id>
+    <coordinates>
+      <x>990</x>
+      <y>410</y>
+      <w>160</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;microservice&gt;&gt;
+*Managing Products*
+*and Customer (CRUD)*</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLGeneric</id>
+    <coordinates>
+      <x>990</x>
+      <y>710</y>
+      <w>160</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;microservice&gt;&gt;
+*Purchasing Products*</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLGeneric</id>
+    <coordinates>
+      <x>1000</x>
+      <y>360</y>
+      <w>140</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;microservice&gt;&gt;
+*Monitoring*</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLGeneric</id>
+    <coordinates>
+      <x>990</x>
+      <y>660</y>
+      <w>160</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;microservice&gt;&gt;
+*KomponentenAnalyse*</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLGeneric</id>
+    <coordinates>
+      <x>990</x>
+      <y>610</y>
+      <w>160</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;microservice&gt;&gt;
+*Ingenieur-Chat*</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1250</x>
+      <y>190</y>
+      <w>230</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>lt=-
+</panel_attributes>
+    <additional_attributes>210.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>740</x>
+      <y>500</y>
+      <w>170</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>lt=-
+HTTP/REST</panel_attributes>
+    <additional_attributes>150.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>740</x>
+      <y>240</y>
+      <w>170</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>lt=-
+HTTP/REST</panel_attributes>
+    <additional_attributes>150.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>600</x>
+      <y>750</y>
+      <w>210</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>*Scaling Strategy:*
+Min 1 Instanz
+Für jedes Optional Equipment:
+Erhöhe Anzahl der Instanzen
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>800</x>
+      <y>670</y>
+      <w>210</w>
+      <h>130</h>
+    </coordinates>
+    <panel_attributes>lt=-
+</panel_attributes>
+    <additional_attributes>190.0;10.0;10.0;110.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLGeneric</id>
+    <coordinates>
+      <x>1100</x>
+      <y>840</y>
+      <w>170</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>symbol=artifact
+&lt;&lt;artifact&gt;&gt;
+*ERP-Application.jar*</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLGeneric</id>
+    <coordinates>
+      <x>900</x>
+      <y>840</y>
+      <w>160</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>symbol=artifact
+&lt;&lt;artifact&gt;&gt;
+*CRM-Application.jar*</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1120</x>
+      <y>750</y>
+      <w>90</w>
+      <h>110</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.&gt;
+&lt;&lt;deploy&gt;&gt;</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;90.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1010</x>
+      <y>750</y>
+      <w>90</w>
+      <h>110</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.&gt;
+&lt;&lt;deploy&gt;&gt;</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;90.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLDeployment</id>
+    <coordinates>
+      <x>1460</x>
+      <y>500</y>
+      <w>200</w>
+      <h>260</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;device&gt;&gt;
+_*:ApplicationServer*_
+group=group-2</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLGeneric</id>
+    <coordinates>
+      <x>1480</x>
+      <y>560</y>
+      <w>150</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>symbol=component
+&lt;&lt;component&gt;&gt;
+CRM-Applicaition
+group=group-2</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLGeneric</id>
+    <coordinates>
+      <x>1480</x>
+      <y>650</y>
+      <w>150</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>symbol=component
+&lt;&lt;component&gt;&gt;
+ERP-Applicaition
+group=group-2</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1250</x>
+      <y>610</y>
+      <w>230</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>lt=-
+</panel_attributes>
+    <additional_attributes>210.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>1410</x>
+      <y>840</y>
+      <w>310</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>*CRM / ERP:*
+Alternative Methoden zur Integration:
+1) Deployment auf VM
+2) Schnittstelle zum externen Application-Server
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1550</x>
+      <y>750</y>
+      <w>40</w>
+      <h>110</h>
+    </coordinates>
+    <panel_attributes>lt=-
+2)</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;90.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1260</x>
+      <y>860</y>
+      <w>170</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>lt=-
+1)</panel_attributes>
+    <additional_attributes>150.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>970</x>
+      <y>910</y>
+      <w>610</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>lt=-
+1)</panel_attributes>
+    <additional_attributes>590.0;10.0;590.0;50.0;10.0;50.0;10.0;10.0</additional_attributes>
+  </element>
+</diagram>
