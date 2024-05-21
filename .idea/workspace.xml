@@ -10,10 +10,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8eec5bcc-940c-4ed5-aa61-73870d3cf9a0" name="Changes" comment="Thread Name angepasst Todo 1) Mainclass nicht threadsafe 2) Einträge in config möglicherweise doppelt 3) Split-Symbol ungünstig">
-      <change afterPath="$PROJECT_DIR$/src/Upload Docs/OOKAContextMapLukasLeschMartinPetersohn - Kopie.drawio" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="8eec5bcc-940c-4ed5-aa61-73870d3cf9a0" name="Changes" comment="Fix: Doppelte Einträge in config.txt / &quot;:&quot; durch &quot;&gt;&quot; in config.txt ersetzt / NullPointerException bei openSession()">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Afg2RuntimeEnviornment/RunEnvironment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Afg2RuntimeEnviornment/RunEnvironment.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -92,7 +91,7 @@
     "git-widget-placeholder": "master",
     "jdk.selected.JAVA_MODULE": "openjdk-22",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/lukas/IdeaProjects/OOKASS24/src/Upload Docs",
+    "last_opened_file_path": "C:/Users/mpete/IdeaProjects/OOKASS24/out/artifacts/OOKAAbgabeLukasLeschUeb2_jar",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -196,7 +195,8 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="jdk-22-openjdk-22-4caba194b151-f504ca98" />
+        <option value="bundled-jdk-9f38398b9061-18abd8497189-intellij.indexing.shared.core-IU-241.14494.240" />
+        <option value="bundled-js-predefined-1d06a55b98c1-74d2a5396914-JavaScript-IU-241.14494.240" />
       </set>
     </attachedChunks>
   </component>
@@ -220,10 +220,6 @@
       <workItem from="1715071676290" duration="629000" />
       <workItem from="1715079547219" duration="1909000" />
       <workItem from="1715433732153" duration="21464000" />
-      <workItem from="1716122833345" duration="588000" />
-      <workItem from="1716128264529" duration="88000" />
-      <workItem from="1716228868145" duration="585000" />
-      <workItem from="1716293214970" duration="926000" />
     </task>
     <task id="LOCAL-00001" summary="UnitTest">
       <option name="closed" value="true" />
@@ -281,7 +277,15 @@
       <option name="project" value="LOCAL" />
       <updated>1715452792744</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Fix: Doppelte Einträge in config.txt / &quot;:&quot; durch &quot;&gt;&quot; in config.txt ersetzt / NullPointerException bei openSession()">
+      <option name="closed" value="true" />
+      <created>1715524764967</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1715524764967</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -307,7 +311,8 @@
     <MESSAGE value="Blatt 3 CR2 erledigt. Methoden können jetzt ausgeführt werden" />
     <MESSAGE value="Speicherklasse für config" />
     <MESSAGE value="CR1 erster versuch" />
-    <option name="LAST_COMMIT_MESSAGE" value="CR1 erster versuch" />
+    <MESSAGE value="Fix: Doppelte Einträge in config.txt / &quot;:&quot; durch &quot;&gt;&quot; in config.txt ersetzt / NullPointerException bei openSession()" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fix: Doppelte Einträge in config.txt / &quot;:&quot; durch &quot;&gt;&quot; in config.txt ersetzt / NullPointerException bei openSession()" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
