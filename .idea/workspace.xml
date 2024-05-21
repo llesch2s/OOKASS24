@@ -10,16 +10,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8eec5bcc-940c-4ed5-aa61-73870d3cf9a0" name="Changes" comment="CR1 erster versuch">
-      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/artifacts/OOKAAbgabeLukasLeschUeb1_jar2.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/artifacts/OOKAAbgabeLukasLeschUeb1_jar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/OOKAAbgabeLukasLeschUeb1_jar.xml" afterDir="false" />
+    <list default="true" id="8eec5bcc-940c-4ed5-aa61-73870d3cf9a0" name="Changes" comment="Thread Name angepasst Todo 1) Mainclass nicht threadsafe 2) Einträge in config möglicherweise doppelt 3) Split-Symbol ungünstig">
+      <change afterPath="$PROJECT_DIR$/src/Upload Docs/OOKAContextMapLukasLeschMartinPetersohn - Kopie.drawio" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/OOKAAbgabeLukasLeschUeb1_jar/OOKAAbgabeLukasLeschUeb1.jar" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/OOKAAbgabeLukasLeschUeb1_jar/OOKAAbgabeLukasLeschUeb1.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Afg2RuntimeEnviornment/RunComponent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Afg2RuntimeEnviornment/RunComponent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Afg2RuntimeEnviornment/RunEnvironment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Afg2RuntimeEnviornment/RunEnvironment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Afg2RuntimeEnviornment/SaveConfigLocally.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Afg2RuntimeEnviornment/SaveConfigLocally.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -98,7 +92,7 @@
     "git-widget-placeholder": "master",
     "jdk.selected.JAVA_MODULE": "openjdk-22",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/mpete/IdeaProjects/OOKASS24/out/artifacts/OOKAAbgabeLukasLeschUeb2_jar",
+    "last_opened_file_path": "C:/Users/lukas/IdeaProjects/OOKASS24/src/Upload Docs",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -202,8 +196,7 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-jdk-9f38398b9061-18abd8497189-intellij.indexing.shared.core-IU-241.14494.240" />
-        <option value="bundled-js-predefined-1d06a55b98c1-74d2a5396914-JavaScript-IU-241.14494.240" />
+        <option value="jdk-22-openjdk-22-4caba194b151-f504ca98" />
       </set>
     </attachedChunks>
   </component>
@@ -227,6 +220,10 @@
       <workItem from="1715071676290" duration="629000" />
       <workItem from="1715079547219" duration="1909000" />
       <workItem from="1715433732153" duration="21464000" />
+      <workItem from="1716122833345" duration="588000" />
+      <workItem from="1716128264529" duration="88000" />
+      <workItem from="1716228868145" duration="585000" />
+      <workItem from="1716293214970" duration="926000" />
     </task>
     <task id="LOCAL-00001" summary="UnitTest">
       <option name="closed" value="true" />
