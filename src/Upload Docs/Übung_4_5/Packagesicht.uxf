@@ -149,28 +149,6 @@ speichern</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1420</x>
-      <y>150</y>
-      <w>180</w>
-      <h>140</h>
-    </coordinates>
-    <panel_attributes/>
-    <additional_attributes>10.0;10.0;160.0;120.0</additional_attributes>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>1370</x>
-      <y>260</y>
-      <w>230</w>
-      <h>230</h>
-    </coordinates>
-    <panel_attributes/>
-    <additional_attributes>10.0;210.0;210.0;10.0</additional_attributes>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
       <x>920</x>
       <y>260</y>
       <w>680</w>

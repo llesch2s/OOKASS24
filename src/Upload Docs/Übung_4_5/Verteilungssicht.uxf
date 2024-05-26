@@ -111,8 +111,8 @@ _*:DB-Server*_</panel_attributes>
       <w>290</w>
       <h>560</h>
     </coordinates>
-    <panel_attributes>&lt;&lt;execution environment&gt;&gt;
-_*:Virtual Machine*_</panel_attributes>
+    <panel_attributes>&lt;&lt;container&gt;&gt;
+_*:Docker*_</panel_attributes>
     <additional_attributes/>
   </element>
   <element>

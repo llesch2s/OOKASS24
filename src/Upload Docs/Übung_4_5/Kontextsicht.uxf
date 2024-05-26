@@ -27,9 +27,9 @@ halign=center</panel_attributes>
   <element>
     <id>UMLActor</id>
     <coordinates>
-      <x>240</x>
+      <x>230</x>
       <y>340</y>
-      <w>80</w>
+      <w>100</w>
       <h>110</h>
     </coordinates>
     <panel_attributes>Großkunde</panel_attributes>
@@ -256,17 +256,6 @@ valign=top</panel_attributes>
     </coordinates>
     <panel_attributes>Geschäftsführung</panel_attributes>
     <additional_attributes/>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>290</x>
-      <y>760</y>
-      <w>440</w>
-      <h>70</h>
-    </coordinates>
-    <panel_attributes/>
-    <additional_attributes>10.0;50.0;420.0;10.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>

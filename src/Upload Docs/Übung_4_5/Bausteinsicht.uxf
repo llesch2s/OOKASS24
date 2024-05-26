@@ -70,7 +70,7 @@ org.postgresql.Driver</panel_attributes>
     </coordinates>
     <panel_attributes>lt=()-[]
 REST
-Kunden-API</panel_attributes>
+Kleinkunden-API</panel_attributes>
     <additional_attributes>190.0;20.0;10.0;20.0</additional_attributes>
   </element>
   <element>
@@ -114,7 +114,7 @@ Interne-API</panel_attributes>
     <id>Relation</id>
     <coordinates>
       <x>1480</x>
-      <y>570</y>
+      <y>440</y>
       <w>210</w>
       <h>50</h>
     </coordinates>
@@ -419,17 +419,6 @@ CRM-Access</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1420</x>
-      <y>510</y>
-      <w>80</w>
-      <h>100</h>
-    </coordinates>
-    <panel_attributes>lt=&lt;-</panel_attributes>
-    <additional_attributes>10.0;10.0;60.0;80.0</additional_attributes>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
       <x>1320</x>
       <y>550</y>
       <w>30</w>
@@ -460,17 +449,6 @@ CRM-Access</panel_attributes>
     <panel_attributes>lt=&lt;.
 </panel_attributes>
     <additional_attributes>100.0;360.0;100.0;330.0;10.0;330.0;10.0;10.0</additional_attributes>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>1420</x>
-      <y>580</y>
-      <w>80</w>
-      <h>150</h>
-    </coordinates>
-    <panel_attributes>lt=&lt;-</panel_attributes>
-    <additional_attributes>10.0;130.0;60.0;10.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
@@ -513,24 +491,13 @@ CRM-Access</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1160</x>
-      <y>520</y>
-      <w>90</w>
-      <h>100</h>
-    </coordinates>
-    <panel_attributes>lt=&lt;-</panel_attributes>
-    <additional_attributes>10.0;80.0;70.0;10.0</additional_attributes>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
       <x>1170</x>
-      <y>580</y>
+      <y>450</y>
       <w>330</w>
-      <h>70</h>
+      <h>200</h>
     </coordinates>
     <panel_attributes>lt=&lt;-</panel_attributes>
-    <additional_attributes>10.0;50.0;310.0;10.0</additional_attributes>
+    <additional_attributes>10.0;180.0;270.0;150.0;310.0;10.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
@@ -542,5 +509,75 @@ CRM-Access</panel_attributes>
     </coordinates>
     <panel_attributes>lt=&lt;-</panel_attributes>
     <additional_attributes>10.0;160.0;110.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1480</x>
+      <y>570</y>
+      <w>210</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>lt=()-[]
+REST
+Großkunden-API</panel_attributes>
+    <additional_attributes>190.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1400</x>
+      <y>580</y>
+      <w>100</w>
+      <h>130</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;110.0;80.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1170</x>
+      <y>320</y>
+      <w>330</w>
+      <h>310</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;290.0;260.0;260.0;310.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1150</x>
+      <y>530</y>
+      <w>100</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;70.0;80.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>620</x>
+      <y>340</y>
+      <w>720</w>
+      <h>440</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.
+</panel_attributes>
+    <additional_attributes>10.0;10.0;390.0;420.0;700.0;420.0;700.0;410.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>620</x>
+      <y>340</y>
+      <w>430</w>
+      <h>390</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.
+</panel_attributes>
+    <additional_attributes>10.0;10.0;410.0;370.0</additional_attributes>
   </element>
 </diagram>
