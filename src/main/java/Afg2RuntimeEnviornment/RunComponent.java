@@ -30,6 +30,7 @@ public class RunComponent implements Runnable{
 
     public void stop() {
         try {
+            linkedBlockingQueue.add(new QueueObject("Stop",new Object[]{}));
            componentToBeRun.getClass().getMethod("Stop").invoke(componentToBeRun);
 
         }catch (NoSuchMethodException name){
@@ -97,7 +98,7 @@ public class RunComponent implements Runnable{
         while (running.get()) {
                  try {
                  QueueObject queueObject = linkedBlockingQueue.poll(3, TimeUnit.SECONDS);
-                 if (queueObject.getMethodName().equals("stop")) {
+                 if (queueObject.getMethodName().equals("Stop")) {
                      running.set(false);
                      continue;
                  }
@@ -111,8 +112,7 @@ public class RunComponent implements Runnable{
 
                  System.out.println("Anzahl elemente in Queue:" + linkedBlockingQueue.size());
              }catch(NullPointerException n){
-                 System.out.println("No Component deployed");
-                 running.set(false);
+
              } catch(InvocationTargetException e){
                  throw new RuntimeException(e);
              } catch(IllegalAccessException e){

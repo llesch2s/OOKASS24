@@ -259,10 +259,10 @@ public class RunEnvironment {
         rv.runComponentMethod(pathToJar,"searchHotelbyName",new Object[]{"Riu Plaza"});
         rv.runComponentMethod(pathToJar,"searchHotelbyName",new Object[]{"Riu Plaza"});
 
-        /* rv.stopComponent(1);
-        rv.stopComponent(2);
-        rv.stopComponent(3);
-        */
+         rv.stopComponent(1);
+         rv.stopComponent(2);
+         rv.stopComponent(3);
+
         rv.getStatus();
 
     /*  rv.unDeployComponent(1);
