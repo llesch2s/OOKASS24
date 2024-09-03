@@ -5,6 +5,9 @@ import java.lang.reflect.InvocationTargetException;
 import java.net.URL;
 import java.net.URLClassLoader;
 import java.util.Enumeration;
+import java.util.concurrent.BlockingQueue;
+import java.util.concurrent.LinkedBlockingQueue;
+import java.util.concurrent.TimeUnit;
 import java.util.concurrent.atomic.AtomicBoolean;
 import java.util.jar.Attributes;
 import java.util.jar.JarEntry;
@@ -16,11 +19,13 @@ public class RunComponent implements Runnable{
     private Object componentToBeRun = null;
     private Thread internalThread;
     private final AtomicBoolean running = new AtomicBoolean(false);
-
+    private BlockingQueue<QueueObject> linkedBlockingQueue = new LinkedBlockingQueue<>();
+    public int getLinkedBlockingQueueSize() {
+        return linkedBlockingQueue.size();
+    }
     public void start(){
         internalThread = new Thread(this);
         internalThread.start();
-
     }
 
     public void stop() {
@@ -36,9 +41,11 @@ public class RunComponent implements Runnable{
         }
         running.set(false);
     }
+    public void runComponentMethod(String name,Object[] parameters){
+                linkedBlockingQueue.add(new QueueObject(name,parameters));
+    }
     public void setLogger(Logger logger) throws NoSuchMethodException {
-
-
+            String className=logger.getClass().getName();
             try {
                 componentToBeRun.getClass().getMethod("setMylog", Logger.class).invoke(componentToBeRun,logger);
             } catch (InvocationTargetException e) {
@@ -64,22 +71,57 @@ public class RunComponent implements Runnable{
             System.out.println("Kein Logger gesetzt");
         }
     }
+    private Class<?>[] generateClasses(Object[] parameters){
+        Class<?>[] classes = new Class<?>[parameters.length];
+        for (int i = 0; i < parameters.length; i++) {
+            classes[i] = parameters[i].getClass();
+        }
+        return classes;
+    }
     @Override
     public void run() {
-         running.set(true);
-         try {
-             componentToBeRun.getClass().getMethod("start").invoke(componentToBeRun);
-         }catch (NullPointerException n){
-             System.out.println("No Component deployed");
-         } catch (NoSuchMethodException e) {
-             throw new RuntimeException(e);
-         } catch (InvocationTargetException e) {
-             throw new RuntimeException(e);
-         } catch (IllegalAccessException e) {
-             throw new RuntimeException(e);
-         }
-        while(running.get()){
+        try {
+            System.out.println("starting hotel");
+            componentToBeRun.getClass().getMethod("start").invoke(componentToBeRun);
+        }catch (NoSuchMethodException name){
 
+        } catch (InvocationTargetException e) {
+            throw new RuntimeException(e);
+        } catch (IllegalAccessException e) {
+            throw new RuntimeException(e);
+        }
+
+        running.set(true);
+
+
+        while (running.get()) {
+                 try {
+                 QueueObject queueObject = linkedBlockingQueue.poll(3, TimeUnit.SECONDS);
+                 if (queueObject.getMethodName().equals("stop")) {
+                     running.set(false);
+                     continue;
+                 }
+                 if (queueObject.getParameters().length == 0) {
+                     componentToBeRun.getClass().getMethod(queueObject.getMethodName()).invoke(componentToBeRun);
+                 } else {
+                     Object[] parameters = queueObject.getParameters();
+                     Class<?>[] classes = generateClasses(parameters);
+                     componentToBeRun.getClass().getMethod(queueObject.getMethodName(), classes).invoke(componentToBeRun, parameters);
+                 }
+
+                 System.out.println("Anzahl elemente in Queue:" + linkedBlockingQueue.size());
+             }catch(NullPointerException n){
+                 System.out.println("No Component deployed");
+                 running.set(false);
+             } catch(InvocationTargetException e){
+                 throw new RuntimeException(e);
+             } catch(IllegalAccessException e){
+                 throw new RuntimeException(e);
+             } catch(NoSuchMethodException e){
+                 throw new RuntimeException(e);
+             } catch(InterruptedException e){
+                 throw new RuntimeException(e);
+             }
          }
     }
     public void deployComponentWithPath(String pathToJar){

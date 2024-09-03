@@ -93,7 +93,6 @@ public class SaveConfigLocally {
     }
 
     public static void main(String[] args) {
-        // Test the methods
         String configContent = "Setting1=Value1\nSetting2=Value2";
         emptyConfig();
         saveConfigLine("1-n-notrunning-path");

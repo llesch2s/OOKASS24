@@ -13,7 +13,7 @@ class HotelRetrieval implements HotelSearch{
          private Cache localCacheInstance;
     public HotelRetrieval(){
         acc = new DBAccess();
-        localCacheInstance = Cache.getCache();
+        localCacheInstance = new Cache();
 
     }
     @Override

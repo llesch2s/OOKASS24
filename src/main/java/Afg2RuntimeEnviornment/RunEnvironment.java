@@ -11,7 +11,7 @@ import java.util.concurrent.atomic.AtomicBoolean;
 import static java.lang.Integer.parseInt;
 
 public class RunEnvironment {
-    private class Status{
+    public class Status{
         private int id;
         private String name;
         private String zustand;
@@ -52,10 +52,12 @@ public class RunEnvironment {
     private final AtomicBoolean running = new AtomicBoolean(false);
     private String[] components;
     private SaveConfigLocally saveConfigLocally = new SaveConfigLocally();
+    private LoadBalancer loadBalancer = null;
     public RunEnvironment(){
-
+        this.loadBalancer=new LoadBalancer(this);
     }
     public void deployComponent(String pathToJar,String name){
+        // prüfe, ob runtime enviornment läuft
         if(running.get()) {
             RunComponent intrc = new RunComponent();
             intrc.deployComponentWithPath(pathToJar);
@@ -72,6 +74,7 @@ public class RunEnvironment {
                     content.append(line).append("\n");
                 }
                 reader.close();
+                // wenn config nicht leer, prüfe, ob Komponentenid schon vergeben
                 if(content != null && !content.isEmpty()) {
                     String[] components = content.toString().split("\n");
                     for (String component : components) {
@@ -135,8 +138,12 @@ public class RunEnvironment {
           Status locStatus= intsrc.getKey();
           locStatus.setZustand("Running");
         saveConfigLocally.updateConfigLine(locStatus.getId(),locStatus.toString());
+        System.out.println("component starting");
         intsrc.getValue().start();
 
+    }
+    public void runComponentMethod(String pathToJar,String methodName,Object[] parameters){
+        this.loadBalancer.runComponentMethod(pathToJar,methodName,parameters);
     }
     public void stopComponent(int id){
         Map.Entry<Status,RunComponent> intsrc= iterateOverHashMap(id);
@@ -163,6 +170,9 @@ public class RunEnvironment {
     public void loadConfig(){
         if(running.get()) {
             String componentsString = saveConfigLocally.readConfig();
+            if(componentsString.isEmpty()){
+                return;
+            }
             saveConfigLocally.emptyConfig();
             String[] component = componentsString.split("\n");
             int len = component.length;
@@ -180,6 +190,7 @@ public class RunEnvironment {
         }
     }
     public void sendLogger(int id){
+        // hier dann load balancing für nicht instanz-spezifische anfragen.
         Map.Entry<Status,RunComponent> intsrc= iterateOverHashMap(id);
         if(intsrc==null){
             throw new NullPointerException("Element mit id:"+id+" existiert nicht!");
@@ -205,14 +216,16 @@ public class RunEnvironment {
     }
 
     public String environmentStatus(){ return running.toString(); }
-
+    public HashMap<Status,RunComponent> getThreadHashMap(){
+           return threadHashMap;
+    }
     public static void main(String[] args) {
         String pathToJar = System.getProperty("user.home") + "/IdeaProjects/OOKASS24/out/artifacts/OOKAAbgabeLukasLeschUeb1_jar/OOKAAbgabeLukasLeschUeb1.jar";
 
         RunEnvironment rv = new RunEnvironment();
-        //rv.saveConfigLocally.emptyConfig();
+        rv.saveConfigLocally.emptyConfig();
         rv.startEnviornment();
-        //rv.loadConfig();
+        rv.loadConfig();
 
         rv.deployComponent(pathToJar,"Thread1");
         rv.deployComponent(pathToJar,"Thread2");
@@ -223,20 +236,39 @@ public class RunEnvironment {
         rv.startComponent(3);
 
         rv.getStatus();
+
         rv.injectLoggerIntoComponent(1);
         rv.injectLoggerIntoComponent(2);
         rv.injectLoggerIntoComponent(3);
+
         rv.sendLogger(1);
         rv.sendLogger(2);
         rv.sendLogger(3);
-        rv.stopComponent(1);
+
+        rv.runComponentMethod(pathToJar,"searchHotelbyName",new Object[]{"Riu Plaza"});
+        rv.runComponentMethod(pathToJar,"searchHotelbyName",new Object[]{"Riu Plaza"});
+        rv.runComponentMethod(pathToJar,"searchHotelbyName",new Object[]{"Riu Plaza"});
+        rv.runComponentMethod(pathToJar,"searchHotelbyName",new Object[]{"Riu Plaza"});
+        rv.runComponentMethod(pathToJar,"searchHotelbyName",new Object[]{"Riu Plaza"});
+        rv.runComponentMethod(pathToJar,"searchHotelbyName",new Object[]{"Riu Plaza"});
+        rv.runComponentMethod(pathToJar,"searchHotelbyName",new Object[]{"Riu Plaza"});
+        rv.runComponentMethod(pathToJar,"searchHotelbyName",new Object[]{"WinzerHotel"});
+        rv.runComponentMethod(pathToJar,"searchHotelbyName",new Object[]{"Riu Plaza"});
+        rv.runComponentMethod(pathToJar,"searchHotelbyName",new Object[]{"Riu Plaza"});
+        rv.runComponentMethod(pathToJar,"searchHotelbyName",new Object[]{"ElsHotel"});
+        rv.runComponentMethod(pathToJar,"searchHotelbyName",new Object[]{"Riu Plaza"});
+        rv.runComponentMethod(pathToJar,"searchHotelbyName",new Object[]{"Riu Plaza"});
+
+        /* rv.stopComponent(1);
         rv.stopComponent(2);
         rv.stopComponent(3);
+        */
         rv.getStatus();
-        rv.unDeployComponent(1);
+
+    /*  rv.unDeployComponent(1);
         rv.unDeployComponent(2);
         rv.unDeployComponent(3);
-        rv.getStatus();
+    */   rv.getStatus();
 
         rv.stopEnviornment();
     }

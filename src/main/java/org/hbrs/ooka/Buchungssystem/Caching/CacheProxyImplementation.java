@@ -6,7 +6,7 @@ public class CacheProxyImplementation implements CacheProxy{
 
     Cache cache = null;
     public CacheProxyImplementation(){
-        cache = Cache.getCache();
+        cache = new Cache();
     }
 
     @Override

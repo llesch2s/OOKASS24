@@ -18,12 +18,22 @@ public class MainClass {
     public  void start(){
         hotelRetrieval.set(new HotelRetrievalProxyImplementation());
         hotelRetrieval.get().openSession();
-        List<Hotel> listHotelRetrievalResults = hotelRetrieval.get().getHotelByName("*");
+        System.out.println("Process Started");
+        /*List<Hotel> listHotelRetrievalResults = hotelRetrieval.get().getHotelByName("*");
+        for(Hotel h:listHotelRetrievalResults){
+            System.out.println("Id:"+h.getId());
+            System.out.println("Name:"+h.getName());
+            System.out.println("Location:"+h.getLocation());
+        }*/
+    }
+    public List<Hotel> searchHotelbyName(String arg){
+        List<Hotel> listHotelRetrievalResults = hotelRetrieval.get().getHotelByName(arg);
         for(Hotel h:listHotelRetrievalResults){
             System.out.println("Id:"+h.getId());
             System.out.println("Name:"+h.getName());
             System.out.println("Location:"+h.getLocation());
         }
+        return listHotelRetrievalResults;
     }
     public void setMylog(Logger logger){
         mylog.set(logger);
@@ -34,7 +44,7 @@ public class MainClass {
 
     }
     @Stop
-    public  void stop(){
+    public void stop(){
 
             hotelRetrieval.get().closeSession();
 
