@@ -46,6 +46,8 @@ public class RunEnvironment {
         public String toString(){
             return id+">"+name+">"+zustand+">"+pathToJar;
         }
+
+
     }
     private HashMap<Status,RunComponent> threadHashMap=null;
     private int laufendeNummer = 1;
@@ -147,6 +149,7 @@ public class RunEnvironment {
     }
     public void stopComponent(int id){
         Map.Entry<Status,RunComponent> intsrc= iterateOverHashMap(id);
+
         if(intsrc==null){
             throw new NullPointerException("Element mit id:"+id+" existiert nicht!");
         }
@@ -157,6 +160,7 @@ public class RunEnvironment {
     }
     public void injectLoggerIntoComponent(int id)  {
         Map.Entry<Status,RunComponent> intsrc= iterateOverHashMap(id);
+
         if(intsrc==null){
             throw new NullPointerException("Element mit id:"+id+" existiert nicht!");
         }
@@ -219,11 +223,12 @@ public class RunEnvironment {
     public HashMap<Status,RunComponent> getThreadHashMap(){
            return threadHashMap;
     }
+
     public static void main(String[] args) {
         String pathToJar = System.getProperty("user.home") + "/IdeaProjects/OOKASS24/out/artifacts/OOKAAbgabeLukasLeschUeb1_jar/OOKAAbgabeLukasLeschUeb1.jar";
 
         RunEnvironment rv = new RunEnvironment();
-        rv.saveConfigLocally.emptyConfig();
+        //rv.saveConfigLocally.emptyConfig();
         rv.startEnviornment();
         rv.loadConfig();
 
@@ -258,12 +263,13 @@ public class RunEnvironment {
         rv.runComponentMethod(pathToJar,"searchHotelbyName",new Object[]{"ElsHotel"});
         rv.runComponentMethod(pathToJar,"searchHotelbyName",new Object[]{"Riu Plaza"});
         rv.runComponentMethod(pathToJar,"searchHotelbyName",new Object[]{"Riu Plaza"});
-
+        
          rv.stopComponent(1);
          rv.stopComponent(2);
          rv.stopComponent(3);
 
         rv.getStatus();
+
 
     /*  rv.unDeployComponent(1);
         rv.unDeployComponent(2);

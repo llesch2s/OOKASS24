@@ -99,7 +99,7 @@ public class RunComponent implements Runnable{
                  try {
                  QueueObject queueObject = linkedBlockingQueue.poll(3, TimeUnit.SECONDS);
                  if (queueObject.getMethodName().equals("Stop")) {
-                     running.set(false);
+                     stop();
                      continue;
                  }
                  if (queueObject.getParameters().length == 0) {

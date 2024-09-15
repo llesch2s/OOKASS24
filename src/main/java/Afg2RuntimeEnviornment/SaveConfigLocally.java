@@ -91,20 +91,4 @@ public class SaveConfigLocally {
             System.err.println( e.getMessage());
         }
     }
-
-    public static void main(String[] args) {
-        String configContent = "Setting1=Value1\nSetting2=Value2";
-        emptyConfig();
-        saveConfigLine("1-n-notrunning-path");
-        saveConfigLine("2-n-notrunning-path");
-        saveConfigLine("3-n-notrunning-path");
-        String readContent = readConfig();
-        System.out.println(readContent);
-        System.out.println("*******************+");
-        updateConfigLine(1,"1-n-running-path");
-        readContent = readConfig();
-        System.out.println(readContent);
-
-    }
-
 }
