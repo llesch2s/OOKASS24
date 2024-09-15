@@ -7,7 +7,6 @@ import java.net.URLClassLoader;
 import java.util.Enumeration;
 import java.util.concurrent.BlockingQueue;
 import java.util.concurrent.LinkedBlockingQueue;
-import java.util.concurrent.TimeUnit;
 import java.util.concurrent.atomic.AtomicBoolean;
 import java.util.jar.Attributes;
 import java.util.jar.JarEntry;
@@ -97,7 +96,7 @@ public class RunComponent implements Runnable{
 
         while (running.get()) {
                  try {
-                 QueueObject queueObject = linkedBlockingQueue.poll(3, TimeUnit.SECONDS);
+                 QueueObject queueObject = linkedBlockingQueue.poll();
                  if (queueObject.getMethodName().equals("Stop")) {
                      stop();
                      continue;
@@ -119,9 +118,9 @@ public class RunComponent implements Runnable{
                  throw new RuntimeException(e);
              } catch(NoSuchMethodException e){
                  throw new RuntimeException(e);
-             } catch(InterruptedException e){
+             } /*catch(InterruptedException e){
                  throw new RuntimeException(e);
-             }
+             }*/
          }
     }
     public void deployComponentWithPath(String pathToJar){

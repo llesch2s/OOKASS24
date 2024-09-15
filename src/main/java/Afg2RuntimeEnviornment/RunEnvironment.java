@@ -11,7 +11,7 @@ import java.util.concurrent.atomic.AtomicBoolean;
 import static java.lang.Integer.parseInt;
 
 public class RunEnvironment {
-    public class Status{
+    public class Status implements Comparable<Status>{
         private int id;
         private String name;
         private String zustand;
@@ -25,19 +25,19 @@ public class RunEnvironment {
         public int getId(){
             return id;
         }
-        public void setName(String name){
+        private void setName(String name){
             this.name = name;
         }
         public String getName(){
             return name;
         }
-        public void setZustand(String zustand){
+        private void setZustand(String zustand){
             this.zustand=zustand;
         }
         public String getZustand(){
             return zustand;
         }
-        public void setPathToJar(String pathToJar){
+        private void setPathToJar(String pathToJar){
          this.pathToJar = pathToJar;
         }
         public String getPathToJar(){
@@ -47,13 +47,23 @@ public class RunEnvironment {
             return id+">"+name+">"+zustand+">"+pathToJar;
         }
 
-
+        @Override
+        public boolean equals(Object obj){
+            if(obj instanceof Status){
+                return id==((Status)obj).id;
+            }
+            else return false;
+        }
+        @Override
+        public int compareTo(Status o) {
+            return this.id==o.id ? 0:1;
+        }
     }
     private HashMap<Status,RunComponent> threadHashMap=null;
     private int laufendeNummer = 1;
     private final AtomicBoolean running = new AtomicBoolean(false);
     private String[] components;
-    private SaveConfigLocally saveConfigLocally = new SaveConfigLocally();
+    SaveConfigLocally saveConfigLocally = new SaveConfigLocally();
     private LoadBalancer loadBalancer = null;
     public RunEnvironment(){
         this.loadBalancer=new LoadBalancer(this);
@@ -105,13 +115,12 @@ public class RunEnvironment {
     }
 
     public void unDeployComponent(int id){
-            Map.Entry<Status, RunComponent> intsrc = iterateOverHashMap(id);
-            if(intsrc==null){
-                throw new NullPointerException("Element mit id:"+id+" existiert nicht!");
+            try{
+                saveConfigLocally.deleteConfigLine(id);
+                threadHashMap.remove(new Status(id,"","",""));
+            }catch (NullPointerException e){
+                throw new RuntimeException("Komponente nicht deployed");
             }
-            saveConfigLocally.deleteConfigLine(intsrc.getKey().getId());
-            Object ret = threadHashMap.remove(intsrc.getKey());
-
     }
     private Map.Entry<Status,RunComponent> iterateOverHashMap(int id){
         components = new String[threadHashMap.size()];
@@ -263,11 +272,11 @@ public class RunEnvironment {
         rv.runComponentMethod(pathToJar,"searchHotelbyName",new Object[]{"ElsHotel"});
         rv.runComponentMethod(pathToJar,"searchHotelbyName",new Object[]{"Riu Plaza"});
         rv.runComponentMethod(pathToJar,"searchHotelbyName",new Object[]{"Riu Plaza"});
-        
+        /*
          rv.stopComponent(1);
          rv.stopComponent(2);
          rv.stopComponent(3);
-
+         */
         rv.getStatus();
 
 
